@@ -1,0 +1,6 @@
+C:\Users\dlopez\source\repos\GrupoAgape\Entidades\bin\Debug\Entidades.dll
+C:\Users\dlopez\source\repos\GrupoAgape\Entidades\bin\Debug\Entidades.pdb
+C:\Users\dlopez\source\repos\GrupoAgape\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\dlopez\source\repos\GrupoAgape\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\dlopez\source\repos\GrupoAgape\Entidades\obj\Debug\Entidades.dll
+C:\Users\dlopez\source\repos\GrupoAgape\Entidades\obj\Debug\Entidades.pdb

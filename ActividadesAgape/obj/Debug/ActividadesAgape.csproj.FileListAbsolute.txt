@@ -1,0 +1,4 @@
+C:\Users\dlopez\source\repos\GrupoAgape\ActividadesAgape\obj\Debug\ActividadesAgape.csprojAssemblyReference.cache
+C:\Users\dlopez\source\repos\GrupoAgape\ActividadesAgape\obj\Debug\ActividadesAgape.Properties.Resources.resources
+C:\Users\dlopez\source\repos\GrupoAgape\ActividadesAgape\obj\Debug\ActividadesAgape.csproj.GenerateResource.cache
+C:\Users\dlopez\source\repos\GrupoAgape\ActividadesAgape\obj\Debug\ActividadesAgape.csproj.CoreCompileInputs.cache
