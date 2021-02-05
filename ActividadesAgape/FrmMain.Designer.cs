@@ -35,20 +35,20 @@ namespace ActividadesAgape
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
-            this.btnGuardar = new FontAwesome.Sharp.IconButton();
+            this.btnBackToLogin = new FontAwesome.Sharp.IconButton();
+            this.btnRegistro = new FontAwesome.Sharp.IconButton();
+            this.btnSucursales = new FontAwesome.Sharp.IconButton();
+            this.btnActividads = new FontAwesome.Sharp.IconButton();
+            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
+            this.btnEmpleados = new FontAwesome.Sharp.IconButton();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenuLeft.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuLeft
@@ -58,12 +58,12 @@ namespace ActividadesAgape
             this.panelMenuLeft.Controls.Add(this.label4);
             this.panelMenuLeft.Controls.Add(this.label2);
             this.panelMenuLeft.Controls.Add(this.label3);
-            this.panelMenuLeft.Controls.Add(this.iconButton1);
-            this.panelMenuLeft.Controls.Add(this.iconButton3);
-            this.panelMenuLeft.Controls.Add(this.iconButton4);
-            this.panelMenuLeft.Controls.Add(this.iconButton5);
-            this.panelMenuLeft.Controls.Add(this.iconButton6);
-            this.panelMenuLeft.Controls.Add(this.btnGuardar);
+            this.panelMenuLeft.Controls.Add(this.btnBackToLogin);
+            this.panelMenuLeft.Controls.Add(this.btnRegistro);
+            this.panelMenuLeft.Controls.Add(this.btnSucursales);
+            this.panelMenuLeft.Controls.Add(this.btnActividads);
+            this.panelMenuLeft.Controls.Add(this.btnUsuarios);
+            this.panelMenuLeft.Controls.Add(this.btnEmpleados);
             this.panelMenuLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenuLeft.Location = new System.Drawing.Point(0, 0);
             this.panelMenuLeft.Name = "panelMenuLeft";
@@ -122,125 +122,130 @@ namespace ActividadesAgape
             this.label3.TabIndex = 195;
             this.label3.Text = "Rol";
             // 
-            // iconButton1
+            // btnBackToLogin
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.Location = new System.Drawing.Point(11, 486);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(282, 49);
-            this.iconButton1.TabIndex = 206;
-            this.iconButton1.Text = "Volver Al Login";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnBackToLogin.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnBackToLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBackToLogin.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackToLogin.ForeColor = System.Drawing.Color.White;
+            this.btnBackToLogin.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnBackToLogin.IconColor = System.Drawing.Color.White;
+            this.btnBackToLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBackToLogin.IconSize = 30;
+            this.btnBackToLogin.Location = new System.Drawing.Point(11, 486);
+            this.btnBackToLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBackToLogin.Name = "btnBackToLogin";
+            this.btnBackToLogin.Size = new System.Drawing.Size(282, 49);
+            this.btnBackToLogin.TabIndex = 206;
+            this.btnBackToLogin.Text = "Volver Al Login";
+            this.btnBackToLogin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBackToLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBackToLogin.UseVisualStyleBackColor = false;
             // 
-            // iconButton3
+            // btnRegistro
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.Location = new System.Drawing.Point(11, 425);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(282, 49);
-            this.iconButton3.TabIndex = 208;
-            this.iconButton3.Text = "Registrar Actidad";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.btnRegistro.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistro.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistro.ForeColor = System.Drawing.Color.White;
+            this.btnRegistro.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnRegistro.IconColor = System.Drawing.Color.White;
+            this.btnRegistro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRegistro.IconSize = 30;
+            this.btnRegistro.Location = new System.Drawing.Point(11, 425);
+            this.btnRegistro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.Size = new System.Drawing.Size(282, 49);
+            this.btnRegistro.TabIndex = 208;
+            this.btnRegistro.Text = "Registrar Actidad";
+            this.btnRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistro.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRegistro.UseVisualStyleBackColor = false;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
-            // iconButton4
+            // btnSucursales
             // 
-            this.iconButton4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton4.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 30;
-            this.iconButton4.Location = new System.Drawing.Point(11, 364);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(282, 49);
-            this.iconButton4.TabIndex = 209;
-            this.iconButton4.Text = "Sucursales";
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.iconButton4.UseVisualStyleBackColor = false;
+            this.btnSucursales.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSucursales.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSucursales.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSucursales.ForeColor = System.Drawing.Color.White;
+            this.btnSucursales.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnSucursales.IconColor = System.Drawing.Color.White;
+            this.btnSucursales.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSucursales.IconSize = 30;
+            this.btnSucursales.Location = new System.Drawing.Point(11, 364);
+            this.btnSucursales.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSucursales.Name = "btnSucursales";
+            this.btnSucursales.Size = new System.Drawing.Size(282, 49);
+            this.btnSucursales.TabIndex = 209;
+            this.btnSucursales.Text = "Sucursales";
+            this.btnSucursales.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSucursales.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSucursales.UseVisualStyleBackColor = false;
+            this.btnSucursales.Click += new System.EventHandler(this.btnSucursales_Click);
             // 
-            // iconButton5
+            // btnActividads
             // 
-            this.iconButton5.BackColor = System.Drawing.Color.DodgerBlue;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton5.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.White;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.iconButton5.IconColor = System.Drawing.Color.White;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.IconSize = 30;
-            this.iconButton5.Location = new System.Drawing.Point(11, 303);
-            this.iconButton5.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(282, 49);
-            this.iconButton5.TabIndex = 210;
-            this.iconButton5.Text = "Actividades";
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.iconButton5.UseVisualStyleBackColor = false;
+            this.btnActividads.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnActividads.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActividads.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActividads.ForeColor = System.Drawing.Color.White;
+            this.btnActividads.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnActividads.IconColor = System.Drawing.Color.White;
+            this.btnActividads.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnActividads.IconSize = 30;
+            this.btnActividads.Location = new System.Drawing.Point(11, 303);
+            this.btnActividads.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActividads.Name = "btnActividads";
+            this.btnActividads.Size = new System.Drawing.Size(282, 49);
+            this.btnActividads.TabIndex = 210;
+            this.btnActividads.Text = "Actividades";
+            this.btnActividads.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActividads.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnActividads.UseVisualStyleBackColor = false;
+            this.btnActividads.Click += new System.EventHandler(this.btnActividads_Click);
             // 
-            // iconButton6
+            // btnUsuarios
             // 
-            this.iconButton6.BackColor = System.Drawing.Color.DodgerBlue;
-            this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.iconButton6.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.ForeColor = System.Drawing.Color.White;
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.iconButton6.IconColor = System.Drawing.Color.White;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 30;
-            this.iconButton6.Location = new System.Drawing.Point(10, 242);
-            this.iconButton6.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Size = new System.Drawing.Size(282, 49);
-            this.iconButton6.TabIndex = 211;
-            this.iconButton6.Text = "Usuarios";
-            this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.iconButton6.UseVisualStyleBackColor = false;
+            this.btnUsuarios.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnUsuarios.IconColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUsuarios.IconSize = 30;
+            this.btnUsuarios.Location = new System.Drawing.Point(10, 242);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(282, 49);
+            this.btnUsuarios.TabIndex = 211;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
-            // btnGuardar
+            // btnEmpleados
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.btnGuardar.IconColor = System.Drawing.Color.White;
-            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardar.IconSize = 30;
-            this.btnGuardar.Location = new System.Drawing.Point(10, 181);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(282, 49);
-            this.btnGuardar.TabIndex = 205;
-            this.btnGuardar.Text = "Empleados";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnEmpleados.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEmpleados.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleados.ForeColor = System.Drawing.Color.White;
+            this.btnEmpleados.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnEmpleados.IconColor = System.Drawing.Color.White;
+            this.btnEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmpleados.IconSize = 30;
+            this.btnEmpleados.Location = new System.Drawing.Point(10, 181);
+            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(282, 49);
+            this.btnEmpleados.TabIndex = 205;
+            this.btnEmpleados.Text = "Empleados";
+            this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnEmpleados.UseVisualStyleBackColor = false;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // panelMain
             // 
@@ -259,17 +264,6 @@ namespace ActividadesAgape
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(925, 36);
             this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(842, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -280,6 +274,16 @@ namespace ActividadesAgape
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(842, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(37, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmMain
             // 
@@ -296,8 +300,8 @@ namespace ActividadesAgape
             this.panelMenuLeft.ResumeLayout(false);
             this.panelMenuLeft.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,12 +309,12 @@ namespace ActividadesAgape
         #endregion
 
         private System.Windows.Forms.Panel panelMenuLeft;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton6;
-        private FontAwesome.Sharp.IconButton btnGuardar;
+        private FontAwesome.Sharp.IconButton btnBackToLogin;
+        private FontAwesome.Sharp.IconButton btnRegistro;
+        private FontAwesome.Sharp.IconButton btnSucursales;
+        private FontAwesome.Sharp.IconButton btnActividads;
+        private FontAwesome.Sharp.IconButton btnUsuarios;
+        private FontAwesome.Sharp.IconButton btnEmpleados;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;

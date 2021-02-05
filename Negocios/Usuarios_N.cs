@@ -31,9 +31,13 @@ namespace Negocios
             ObjUsr_D.EditarUsuarios_D();
         }
 
-        public void Borrando_N()
+        public void BorrandoUsuarios_N()
         {
-            ObjUsr_D.Borrar_D();
+            ObjUsr_D.BorrarUsuarios_D();
+        }
+        public DataTable LogeandoUsuarios_N()
+        {
+            return ObjUsr_D.LogingUsuarios_D();
         }
     }
 }

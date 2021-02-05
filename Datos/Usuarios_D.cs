@@ -94,14 +94,14 @@ namespace Datos
 
             cxn.Close();
         }
-        public DataTable loguearUser_D()
+        public DataTable LogingUsuarios_D()
         {
             SqlCommand Command = new SqlCommand("SP_Loging", cxn);
             Command.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
-          //  Command.Parameters.AddWithValue("@_user", E_Usuarios.User);
-          //  Command.Parameters.AddWithValue("@_pass", E_Usuarios.Pass);
+             Command.Parameters.AddWithValue("@_user", ObjEntidades.Usuario1);
+             Command.Parameters.AddWithValue("@_pass", ObjEntidades.Password);
 
             SqlDataAdapter adapter = new SqlDataAdapter(Command);
             DataTable dataTable = new DataTable();

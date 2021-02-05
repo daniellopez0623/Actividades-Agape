@@ -1,2 +1,11 @@
 C:\Users\dlopez\source\repos\GrupoAgape\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
 C:\Users\dlopez\source\repos\GrupoAgape\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\dlopez\source\repos\GrupoAgape\Negocios\bin\Debug\Negocios.dll
+C:\Users\dlopez\source\repos\GrupoAgape\Negocios\bin\Debug\Negocios.pdb
+C:\Users\dlopez\source\repos\GrupoAgape\Negocios\bin\Debug\Datos.dll
+C:\Users\dlopez\source\repos\GrupoAgape\Negocios\bin\Debug\Entidades.dll
+C:\Users\dlopez\source\repos\GrupoAgape\Negocios\bin\Debug\Datos.pdb
+C:\Users\dlopez\source\repos\GrupoAgape\Negocios\bin\Debug\Entidades.pdb
+C:\Users\dlopez\source\repos\GrupoAgape\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\dlopez\source\repos\GrupoAgape\Negocios\obj\Debug\Negocios.dll
+C:\Users\dlopez\source\repos\GrupoAgape\Negocios\obj\Debug\Negocios.pdb

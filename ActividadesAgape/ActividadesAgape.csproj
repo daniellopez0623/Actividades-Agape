@@ -82,6 +82,30 @@
     <Compile Include="FrmRegistros.Designer.cs">
       <DependentUpon>FrmRegistros.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRgtActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRgtActividades.Designer.cs">
+      <DependentUpon>FrmRgtActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRgtEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRgtEmpleados.Designer.cs">
+      <DependentUpon>FrmRgtEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRgtSucursales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRgtSucursales.Designer.cs">
+      <DependentUpon>FrmRgtSucursales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRgtUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRgtUsuarios.Designer.cs">
+      <DependentUpon>FrmRgtUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSucursales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,11 +126,26 @@
     <EmbeddedResource Include="FrmEmpleados.resx">
       <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistros.resx">
       <DependentUpon>FrmRegistros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRgtActividades.resx">
+      <DependentUpon>FrmRgtActividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRgtEmpleados.resx">
+      <DependentUpon>FrmRgtEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRgtSucursales.resx">
+      <DependentUpon>FrmRgtSucursales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRgtUsuarios.resx">
+      <DependentUpon>FrmRgtUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSucursales.resx">
       <DependentUpon>FrmSucursales.cs</DependentUpon>

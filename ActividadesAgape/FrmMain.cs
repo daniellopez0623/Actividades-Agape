@@ -16,10 +16,48 @@ namespace ActividadesAgape
         {
             InitializeComponent();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private Form OpenContenedor;
+        private void OpenPanelConten(Form OpenFrm)
         {
+            if (OpenContenedor != null)
+            {
+                //Abrir ventana
+                OpenContenedor.Close();
+            }
+            OpenContenedor = OpenFrm;
+            OpenFrm.TopLevel = false;
+            OpenFrm.FormBorderStyle = FormBorderStyle.None;
+            OpenFrm.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(OpenFrm);
+            panelMain.Tag = OpenFrm;
+            OpenFrm.BringToFront();
+            OpenFrm.Show();
 
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            OpenPanelConten(new FrmEmpleados());
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            OpenPanelConten(new FrmUsuarios());
+        }
+
+        private void btnActividads_Click(object sender, EventArgs e)
+        {
+            OpenPanelConten(new FrmActividades());
+        }
+
+        private void btnSucursales_Click(object sender, EventArgs e)
+        {
+            OpenPanelConten(new FrmSucursales());
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            OpenPanelConten(new FrmRegistros());
         }
     }
 }
