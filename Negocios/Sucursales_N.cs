@@ -12,6 +12,10 @@ namespace Negocios
     {
         Sucursales_D ObjScl_D = new Sucursales_D();
 
+        public DataTable MostrandoMarcaSucursales_N()
+        {
+            return ObjScl_D.MostrarMarcaSucursales_D();
+        }
         public DataTable MostrandoSucursales_N()
         {
             return ObjScl_D.MostrarSucursales_D();
@@ -19,6 +23,14 @@ namespace Negocios
         public DataTable BuscandoSucursales_N()
         {
             return ObjScl_D.BuscarSucursales_D();
+        }
+        public DataTable MostrandoAdmSucursales_N()
+        {
+            return ObjScl_D.MostrarAdmSucursales_D();
+        }
+        public DataTable BuscandoAdmSucursales_N()
+        {
+            return ObjScl_D.BuscarAdmSucursales_D();
         }
 
         public void GuardandoSucursales_N()

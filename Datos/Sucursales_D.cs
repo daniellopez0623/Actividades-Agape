@@ -11,8 +11,20 @@ namespace Datos
 {
     public class Sucursales_D : Conexion_D
     {
-        Sucursales_E ObjScl_E = new Sucursales_E();
 
+        public DataTable MostrarMarcaSucursales_D()
+        {
+            cxn.Open();
+            SqlCommand cmd = new SqlCommand("Select * from VW_SucursalesMarca", cxn);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            cxn.Close();
+            return dt;
+        }
         public DataTable MostrarSucursales_D()
         {
             cxn.Open();
@@ -26,15 +38,46 @@ namespace Datos
             cxn.Close();
             return dt;
         }
+        public DataTable MostrarAdmSucursales_D()
+        {
+            cxn.Open();
+            SqlCommand cmd = new SqlCommand("Select * from VW_SucursalesAdm", cxn);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            cxn.Close();
+            return dt;
+        }
 
         public DataTable BuscarSucursales_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Buscar_Sucursales", cxn);
+            SqlCommand cmd = new SqlCommand("SP_selectSucursales", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@CodigoSucursal", ObjScl_E.CodigoSucursal1);
+            cmd.Parameters.AddWithValue("@NombreSucursal", Sucursales_E.NombreSucursal1);
+
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter data = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.Fill(tabla);
+
+            cxn.Close();
+            return tabla;
+        }
+        public DataTable BuscarAdmSucursales_D()
+        {
+            SqlCommand cmd = new SqlCommand("SP_selectAdminSucursal", cxn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cxn.Open();
+
+            cmd.Parameters.AddWithValue("@NombreSucursal", Sucursales_E.NombreSucursal1);
 
             cmd.ExecuteNonQuery();
 
@@ -48,14 +91,13 @@ namespace Datos
 
         public void GuardarSucursales_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Guardar_Sucursales", cxn);
+            SqlCommand cmd = new SqlCommand("SP_insertSucursales", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@CodigoSucursal", ObjScl_E.CodigoSucursal1);
-            cmd.Parameters.AddWithValue("@NombreSucursal", ObjScl_E.NombreSucursal1);
-            cmd.Parameters.AddWithValue("@IdDiviciones", ObjScl_E.IdDiviciones1);
+            cmd.Parameters.AddWithValue("@NombreSucursal", Sucursales_E.NombreSucursal1);
+            cmd.Parameters.AddWithValue("@IdMarcas", Sucursales_E.IdDiviciones1);
 
             cmd.ExecuteNonQuery();
 
@@ -64,15 +106,14 @@ namespace Datos
 
         public void EditarSucursales_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Editar_Sucursales", cxn);
+            SqlCommand cmd = new SqlCommand("SP_updateSucursales", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@IdSucursal", ObjScl_E.IdSucursal1);
-            cmd.Parameters.AddWithValue("@CodigoSucursal", ObjScl_E.CodigoSucursal1);
-            cmd.Parameters.AddWithValue("@NombreSucursal", ObjScl_E.NombreSucursal1);
-            cmd.Parameters.AddWithValue("@IdDiviciones", ObjScl_E.IdDiviciones1);
+            cmd.Parameters.AddWithValue("@idSucursal", Sucursales_E.IdSucursal1);
+            cmd.Parameters.AddWithValue("@NombreSucursal", Sucursales_E.NombreSucursal1);
+            cmd.Parameters.AddWithValue("@IdMarcas", Sucursales_E.IdDiviciones1);
 
             cmd.ExecuteNonQuery();
 
@@ -81,13 +122,13 @@ namespace Datos
 
         public void BorrarSucursales_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Borrar_Sucursales", cxn);
+            SqlCommand cmd = new SqlCommand("SP_deleteSucursal", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@IdSucursal", ObjScl_E.IdSucursal1);
-            cmd.Parameters.AddWithValue("@CodigoSucursal", ObjScl_E.CodigoSucursal1);
+            cmd.Parameters.AddWithValue("@idSucursal", Sucursales_E.IdSucursal1);
+            cmd.Parameters.AddWithValue("@IdMarcas", Sucursales_E.IdDiviciones1);
 
             cmd.ExecuteNonQuery();
 

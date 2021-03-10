@@ -29,266 +29,384 @@ namespace ActividadesAgape
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnNuevo = new FontAwesome.Sharp.IconButton();
-            this.btnEliminar = new FontAwesome.Sharp.IconButton();
-            this.btnEditar = new FontAwesome.Sharp.IconButton();
-            this.btnGuardar = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRgtUsuarios));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dateTimePickerUsr = new System.Windows.Forms.DateTimePicker();
+            this.labelMarca = new System.Windows.Forms.Label();
+            this.txtRol = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtPassUser = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtIdUser = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.btnBuscar = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnBorrar = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnGuardar = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnNuevo = new Bunifu.Framework.UI.BunifuTileButton();
+            this.dataGridViewRgtUser = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtNameUser = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRgtUser)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnNuevo
+            // dateTimePickerUsr
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(121)))), ((int)(((byte)(142)))));
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.btnNuevo.IconColor = System.Drawing.Color.White;
-            this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNuevo.IconSize = 30;
-            this.btnNuevo.Location = new System.Drawing.Point(128, 601);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(147, 37);
-            this.btnNuevo.TabIndex = 238;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.dateTimePickerUsr.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerUsr.Font = new System.Drawing.Font("Century Gothic", 13.8F);
+            this.dateTimePickerUsr.Location = new System.Drawing.Point(294, 378);
+            this.dateTimePickerUsr.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerUsr.Name = "dateTimePickerUsr";
+            this.dateTimePickerUsr.Size = new System.Drawing.Size(475, 36);
+            this.dateTimePickerUsr.TabIndex = 248;
+            this.dateTimePickerUsr.Value = new System.DateTime(2021, 5, 3, 0, 0, 0, 0);
             // 
-            // btnEliminar
+            // labelMarca
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(121)))), ((int)(((byte)(142)))));
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnEliminar.IconColor = System.Drawing.Color.White;
-            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminar.IconSize = 30;
-            this.btnEliminar.Location = new System.Drawing.Point(677, 601);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(147, 37);
-            this.btnEliminar.TabIndex = 237;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.labelMarca.AutoSize = true;
+            this.labelMarca.Font = new System.Drawing.Font("Century Gothic", 13.8F);
+            this.labelMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.labelMarca.Location = new System.Drawing.Point(94, 209);
+            this.labelMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMarca.Name = "labelMarca";
+            this.labelMarca.Size = new System.Drawing.Size(113, 30);
+            this.labelMarca.TabIndex = 342;
+            this.labelMarca.Text = "Rol User:";
             // 
-            // btnEditar
+            // txtRol
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(121)))), ((int)(((byte)(142)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btnEditar.IconColor = System.Drawing.Color.White;
-            this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEditar.IconSize = 30;
-            this.btnEditar.Location = new System.Drawing.Point(492, 601);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(147, 37);
-            this.btnEditar.TabIndex = 236;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(121)))), ((int)(((byte)(142)))));
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.btnGuardar.IconColor = System.Drawing.Color.White;
-            this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardar.IconSize = 30;
-            this.btnGuardar.Location = new System.Drawing.Point(309, 601);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(147, 37);
-            this.btnGuardar.TabIndex = 235;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 237);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(901, 332);
-            this.dataGridView1.TabIndex = 239;
+            this.txtRol.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.txtRol.Location = new System.Drawing.Point(215, 209);
+            this.txtRol.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRol.Multiline = true;
+            this.txtRol.Name = "txtRol";
+            this.txtRol.Size = new System.Drawing.Size(123, 31);
+            this.txtRol.TabIndex = 341;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(250, 9);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 13.8F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.label5.Location = new System.Drawing.Point(348, 299);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(357, 42);
-            this.label5.TabIndex = 240;
-            this.label5.Text = "Registro De Usuarios";
+            this.label5.Size = new System.Drawing.Size(165, 30);
+            this.label5.TabIndex = 340;
+            this.label5.Text = "Contraceña:";
             // 
-            // dateTimePicker1
+            // txtPassUser
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(677, 150);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(178, 28);
-            this.dateTimePicker1.TabIndex = 248;
+            this.txtPassUser.Font = new System.Drawing.Font("Century Gothic", 14.2F);
+            this.txtPassUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.txtPassUser.Location = new System.Drawing.Point(519, 294);
+            this.txtPassUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassUser.Name = "txtPassUser";
+            this.txtPassUser.Size = new System.Drawing.Size(250, 37);
+            this.txtPassUser.TabIndex = 339;
             // 
-            // label4
+            // label7
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(676, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 25);
-            this.label4.TabIndex = 247;
-            this.label4.Text = "Fecha Creacion:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 13.8F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.label7.Location = new System.Drawing.Point(70, 295);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(137, 30);
+            this.label7.TabIndex = 338;
+            this.label7.Text = "ID Usuario:";
             // 
-            // label3
+            // txtIdUser
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(347, 155);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 25);
-            this.label3.TabIndex = 246;
-            this.label3.Text = "Contraseña:";
+            this.txtIdUser.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.txtIdUser.Location = new System.Drawing.Point(215, 294);
+            this.txtIdUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIdUser.Multiline = true;
+            this.txtIdUser.Name = "txtIdUser";
+            this.txtIdUser.Size = new System.Drawing.Size(123, 31);
+            this.txtIdUser.TabIndex = 337;
             // 
-            // textBox3
+            // label8
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(496, 155);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(112, 26);
-            this.textBox3.TabIndex = 245;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(81, 42);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(357, 47);
+            this.label8.TabIndex = 336;
+            this.label8.Text = "Registro Usuarios ";
             // 
-            // label1
+            // bunifuGradientPanel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 154);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 25);
-            this.label1.TabIndex = 244;
-            this.label1.Text = "ID Empleado:";
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Black;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(73, 94);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(367, 10);
+            this.bunifuGradientPanel1.TabIndex = 335;
             // 
-            // textBox2
+            // pictureBoxLogo
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(191, 153);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(111, 26);
-            this.textBox2.TabIndex = 243;
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.Location = new System.Drawing.Point(718, 10);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(340, 127);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 334;
+            this.pictureBoxLogo.TabStop = false;
             // 
-            // label2
+            // btnBuscar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(395, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 25);
-            this.label2.TabIndex = 242;
-            this.label2.Text = "ID Rol:";
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnBuscar.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnBuscar.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImagePosition = 15;
+            this.btnBuscar.ImageZoom = 45;
+            this.btnBuscar.LabelPosition = 29;
+            this.btnBuscar.LabelText = "Buscar";
+            this.btnBuscar.Location = new System.Drawing.Point(933, 370);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(124, 105);
+            this.btnBuscar.TabIndex = 333;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
-            // textBox1
+            // btnEditar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(496, 104);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 26);
-            this.textBox1.TabIndex = 241;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnEditar.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnEditar.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.Black;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImagePosition = 15;
+            this.btnEditar.ImageZoom = 48;
+            this.btnEditar.LabelPosition = 29;
+            this.btnEditar.LabelText = "Editar";
+            this.btnEditar.Location = new System.Drawing.Point(933, 483);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(124, 105);
+            this.btnEditar.TabIndex = 332;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
             // 
-            // label6
+            // btnBorrar
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(58, 105);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 25);
-            this.label6.TabIndex = 250;
-            this.label6.Text = "ID Usuario:";
+            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnBorrar.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnBorrar.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
+            this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBorrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.ForeColor = System.Drawing.Color.Black;
+            this.btnBorrar.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrar.Image")));
+            this.btnBorrar.ImagePosition = 15;
+            this.btnBorrar.ImageZoom = 45;
+            this.btnBorrar.LabelPosition = 29;
+            this.btnBorrar.LabelText = "Borrar";
+            this.btnBorrar.Location = new System.Drawing.Point(933, 596);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(124, 105);
+            this.btnBorrar.TabIndex = 331;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
-            // textBox4
+            // btnGuardar
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(191, 104);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(112, 26);
-            this.textBox4.TabIndex = 249;
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnGuardar.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnGuardar.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImagePosition = 15;
+            this.btnGuardar.ImageZoom = 45;
+            this.btnGuardar.LabelPosition = 29;
+            this.btnGuardar.LabelText = "Guardar";
+            this.btnGuardar.Location = new System.Drawing.Point(933, 257);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(124, 105);
+            this.btnGuardar.TabIndex = 330;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnNuevo.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnNuevo.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.Black;
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImagePosition = 15;
+            this.btnNuevo.ImageZoom = 45;
+            this.btnNuevo.LabelPosition = 29;
+            this.btnNuevo.LabelText = "Nuevo";
+            this.btnNuevo.Location = new System.Drawing.Point(933, 144);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(124, 105);
+            this.btnNuevo.TabIndex = 329;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click_1);
+            // 
+            // dataGridViewRgtUser
+            // 
+            this.dataGridViewRgtUser.AllowUserToDeleteRows = false;
+            this.dataGridViewRgtUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewRgtUser.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewRgtUser.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewRgtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewRgtUser.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewRgtUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRgtUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewRgtUser.ColumnHeadersHeight = 50;
+            this.dataGridViewRgtUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRgtUser.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewRgtUser.EnableHeadersVisualStyles = false;
+            this.dataGridViewRgtUser.Location = new System.Drawing.Point(15, 483);
+            this.dataGridViewRgtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewRgtUser.Name = "dataGridViewRgtUser";
+            this.dataGridViewRgtUser.ReadOnly = true;
+            this.dataGridViewRgtUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRgtUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewRgtUser.RowHeadersWidth = 51;
+            this.dataGridViewRgtUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewRgtUser.Size = new System.Drawing.Size(896, 364);
+            this.dataGridViewRgtUser.TabIndex = 328;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 13.8F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.label9.Location = new System.Drawing.Point(392, 214);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(106, 30);
+            this.label9.TabIndex = 345;
+            this.label9.Text = "Usuario:";
+            // 
+            // txtNameUser
+            // 
+            this.txtNameUser.Font = new System.Drawing.Font("Century Gothic", 14.2F);
+            this.txtNameUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.txtNameUser.Location = new System.Drawing.Point(519, 209);
+            this.txtNameUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNameUser.Name = "txtNameUser";
+            this.txtNameUser.Size = new System.Drawing.Size(250, 37);
+            this.txtNameUser.TabIndex = 344;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 13.8F);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.label10.Location = new System.Drawing.Point(70, 378);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(210, 30);
+            this.label10.TabIndex = 346;
+            this.label10.Text = "Fecha creacion:";
             // 
             // FrmRgtUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 668);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1072, 857);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtNameUser);
+            this.Controls.Add(this.labelMarca);
+            this.Controls.Add(this.txtRol);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.txtPassUser);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtIdUser);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.bunifuGradientPanel1);
+            this.Controls.Add(this.pictureBoxLogo);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.dataGridViewRgtUser);
+            this.Controls.Add(this.dateTimePickerUsr);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRgtUsuarios";
             this.Text = "FrmRgtUsuarios";
             this.Load += new System.EventHandler(this.FrmRgtUsuarios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRgtUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton btnNuevo;
-        private FontAwesome.Sharp.IconButton btnEliminar;
-        private FontAwesome.Sharp.IconButton btnEditar;
-        private FontAwesome.Sharp.IconButton btnGuardar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerUsr;
+        private System.Windows.Forms.Label labelMarca;
+        private System.Windows.Forms.TextBox txtRol;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPassUser;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtIdUser;
+        private System.Windows.Forms.Label label8;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private Bunifu.Framework.UI.BunifuTileButton btnBuscar;
+        private Bunifu.Framework.UI.BunifuTileButton btnEditar;
+        private Bunifu.Framework.UI.BunifuTileButton btnBorrar;
+        private Bunifu.Framework.UI.BunifuTileButton btnGuardar;
+        private Bunifu.Framework.UI.BunifuTileButton btnNuevo;
+        private System.Windows.Forms.DataGridView dataGridViewRgtUser;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtNameUser;
+        private System.Windows.Forms.Label label10;
     }
 }

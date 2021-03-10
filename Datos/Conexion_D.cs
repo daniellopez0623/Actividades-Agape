@@ -23,5 +23,22 @@ namespace Datos
         {
             return new SqlConnection(cnxx);
         }
+        public void OpenCnx()
+          {
+              if(cxn.State == 0 )
+              {
+                  cxn.Open();
+              }
+
+
+          }
+        public void CloseCnx()
+        {
+            if (cxn.State != 0)
+            {
+                cxn.Close();
+            }
+        }
+
     }
 }

@@ -10,34 +10,38 @@ namespace Negocios
 {
     public class Usuarios_N
     {
-        Usuarios_D ObjUsr_D = new Usuarios_D();
+        Usuarios_D ObjU_D = new Usuarios_D();
 
         public DataTable MostrandoUsuarios_N()
         {
-            return ObjUsr_D.MostrarUsuarios_D();
+            return ObjU_D.MostrarUsuarios_D();
         }
         public DataTable BuscandoUsuarios_N()
         {
-            return ObjUsr_D.BuscarUsuarios_D();
+            return ObjU_D.BuscarUsuarios_D();
+        }
+        public DataTable BuscandoAdmUsuarios_N()
+        {
+            return ObjU_D.BuscarAdmUsuarios_D();
         }
 
         public void GuardandoUsuarios_N()
         {
-            ObjUsr_D.GuardarUsuarios_D();
+            ObjU_D.GuardarUsuarios_D();
         }
 
         public void EditandoUsuarios_N()
         {
-            ObjUsr_D.EditarUsuarios_D();
+            ObjU_D.EditarUsuarios_D();
         }
 
         public void BorrandoUsuarios_N()
         {
-            ObjUsr_D.BorrarUsuarios_D();
+            ObjU_D.BorrarUsuarios_D();
         }
         public DataTable LogeandoUsuarios_N()
         {
-            return ObjUsr_D.LogingUsuarios_D();
+            return ObjU_D.LogingUsuarios_D();
         }
     }
 }

@@ -27,3 +27,36 @@ C:\Users\dlopez\source\repos\GrupoAgape\ActividadesAgape\bin\Debug\Datos.pdb
 C:\Users\dlopez\source\repos\GrupoAgape\ActividadesAgape\obj\Debug\ActividadesAgape.csproj.CopyComplete
 C:\Users\dlopez\source\repos\GrupoAgape\ActividadesAgape\obj\Debug\ActividadesAgape.exe
 C:\Users\dlopez\source\repos\GrupoAgape\ActividadesAgape\obj\Debug\ActividadesAgape.pdb
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\bin\Debug\ActividadesAgape.exe.config
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\bin\Debug\ActividadesAgape.exe
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\bin\Debug\ActividadesAgape.pdb
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\bin\Debug\Entidades.dll
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\bin\Debug\FontAwesome.Sharp.Pro.dll
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\bin\Debug\Negocios.dll
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\bin\Debug\Datos.dll
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\bin\Debug\Entidades.pdb
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\bin\Debug\Negocios.pdb
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\bin\Debug\Datos.pdb
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.csprojAssemblyReference.cache
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmActividades.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmEmpleados.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmLogin.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmMain.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmRegistros.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmRgtActividades.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmRgtEmpleados.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmRgtSucursales.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmRgtUsuarios.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmSucursales.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.Properties.Resources.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.csproj.GenerateResource.cache
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.csproj.CopyComplete
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.exe
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.pdb
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmMarcas.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmUsers.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmVWRegistros.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmRegistrosAdm.resources

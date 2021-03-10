@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Sucursales_E
+    public static class Sucursales_E
     {
-        private int IdSucursal;
-        private int CodigoSucursal;
-        private int IdDiviciones; 
-        private string NombreSucursal;
+        private static int IdSucursal;
+        private static int IdDiviciones; 
+        private static string NombreSucursal;
 
-        public int IdSucursal1 { get => IdSucursal; set => IdSucursal = value; }
-        public int CodigoSucursal1 { get => CodigoSucursal; set => CodigoSucursal = value; }
-        public int IdDiviciones1 { get => IdDiviciones; set => IdDiviciones = value; }
-        public string NombreSucursal1 { get => NombreSucursal; set => NombreSucursal = value; }
+        public static int IdSucursal1 { get => IdSucursal; set => IdSucursal = value; }
+        public static int IdDiviciones1 { get => IdDiviciones; set => IdDiviciones = value; }
+        public static string NombreSucursal1 { get => NombreSucursal; set => NombreSucursal = value; }
     }
 }

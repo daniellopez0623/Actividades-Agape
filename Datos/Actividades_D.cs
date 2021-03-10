@@ -12,7 +12,6 @@ namespace Datos
 {
     public class Actividades_D : Conexion_D
     {
-        Actividades_E ObjAct_E = new Actividades_E();
 
         public DataTable MostrarActividades_D()
         {
@@ -30,11 +29,11 @@ namespace Datos
 
         public DataTable BuscarActividades_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Buscar_Actividades", cxn);
+            SqlCommand cmd = new SqlCommand("SP_selectAdmActividades", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
-            cmd.Parameters.AddWithValue("@IdActividad", ObjAct_E.IdActividad1);
+            cmd.Parameters.AddWithValue("@DescripcionActividad", Actividades_E.DescripcionActividad1);
 
             cmd.ExecuteNonQuery();
 
@@ -48,47 +47,43 @@ namespace Datos
 
         public void GuardarActividades_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Guardar_Actividades", cxn);
+            SqlCommand cmd = new SqlCommand("SP_insertActividades", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@DescripcionActividad", ObjAct_E.DescripcionActividad1);
-            cmd.Parameters.AddWithValue("@ValorActividad", ObjAct_E.ValorActividad1);
-            cmd.Parameters.AddWithValue("@NivelActividad", ObjAct_E.NivelActividad1);
-            cmd.Parameters.AddWithValue("@NotaActividad", ObjAct_E.NotaActividad1);
+            cmd.Parameters.AddWithValue("@DescripcionActividad", Actividades_E.DescripcionActividad1);
+            cmd.Parameters.AddWithValue("@ValorActividad", Actividades_E.ValorActividad1);
+            cmd.Parameters.AddWithValue("@NivelActividad", Actividades_E.NivelActividad1);
 
             cmd.ExecuteNonQuery();
 
             cxn.Close();
         }
-
         public void EditarActividades_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Editar_Actividades", cxn);
+            SqlCommand cmd = new SqlCommand("SP_updateActividades", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@IdActividad", ObjAct_E.IdActividad1);
-            cmd.Parameters.AddWithValue("@DescripcionActividad", ObjAct_E.DescripcionActividad1);
-            cmd.Parameters.AddWithValue("@ValorActividad", ObjAct_E.ValorActividad1);
-            cmd.Parameters.AddWithValue("@NivelActividad", ObjAct_E.NivelActividad1);
-            cmd.Parameters.AddWithValue("@NotaActividad", ObjAct_E.NotaActividad1);
+            cmd.Parameters.AddWithValue("@idActividades", Actividades_E.IdActividad1);
+            cmd.Parameters.AddWithValue("@DescripcionActividad", Actividades_E.DescripcionActividad1);
+            cmd.Parameters.AddWithValue("@ValorActividad", Actividades_E.ValorActividad1);
+            cmd.Parameters.AddWithValue("@NivelActividad", Actividades_E.NivelActividad1);
 
             cmd.ExecuteNonQuery();
 
             cxn.Close();
         }
-
         public void BorrarActividades_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Borrar_Actividades", cxn);
+            SqlCommand cmd = new SqlCommand("SP_deleteActividades", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@IdActividad", ObjAct_E.IdActividad1);
+            cmd.Parameters.AddWithValue("@idActividades", Actividades_E.IdActividad1);
 
             cmd.ExecuteNonQuery();
 

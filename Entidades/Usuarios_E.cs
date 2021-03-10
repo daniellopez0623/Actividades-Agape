@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Usuarios_E
+    public static class Usuarios_E
     {
-        private int IdUsuario;
-        private int IdEmpleados;
-        private int IdRoles;
-        private string Usuario;
-        private string _Password;
-        private DateTime FechaCreacion;
+        private static int IdUsuario;
+        private static string User;
+        private static string Pass;
+        private static DateTime FechaCreacion;
+      
+        private static string nombreRol;
 
-        public int IdUsuario1 { get => IdUsuario; set => IdUsuario = value; }
-        public int IdEmpleados1 { get => IdEmpleados; set => IdEmpleados = value; }
-        public int IdRoles1 { get => IdRoles; set => IdRoles = value; }
-        public string Usuario1 { get => Usuario; set => Usuario = value; }
-        public string Password { get => _Password; set => _Password = value; }
-        public DateTime FechaCreacion1 { get => FechaCreacion; set => FechaCreacion = value; }
+        public static int IdUsuario1 { get => IdUsuario; set => IdUsuario = value; }
+        public static string User1 { get => User; set => User = value; }
+        public static string Pass1 { get => Pass; set => Pass = value; }
+        public static DateTime FechaCreacion1 { get => FechaCreacion; set => FechaCreacion = value; }
+    
+        public static string NombreRol { get => nombreRol; set => nombreRol = value; }
     }
 }

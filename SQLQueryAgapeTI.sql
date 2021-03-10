@@ -1,34 +1,40 @@
-create database DB_TI_Agape
+create database Db_TiAgape
 go
 
-use DB_TI_Agape
+use Db_TiAgape
 go
 ------------------------------------tablas--------------------------------------------------------------
-create table TblEmpleados(
-IdEmpleado int identity(1,1) not null,
-CodEmpleado as ('Emp'+right('00'+convert(varchar,IdEmpleado),(2))),
+create table Tbl_Empleados(
+IDEmpleado int identity(1,1) not null,
 CodigoEmpleado int primary key not null,
 Nombre nvarchar(50) not null,
 Apellido nvarchar(50) not null,
 Email nvarchar(50) unique not null,
-FechaNacimiento date not null,
 Telefono nvarchar(15) not null
 )
 go
 
-create table TblUsuarios(
-IdUsuario int identity(1,1) primary key not null,
-CodUsuario as ('Usr'+right('00'+convert(varchar,IdUsuario),(2))),
-NombreUsuario nvarchar(50) not null,
-Contraceña nvarchar(50) not null,
-RolUsuario nvarchar(15) not null,
-FechaCreacion datetime not null
+create table Tbl_Roles(
+IDRol int identity(1,1) primary key not null,
+RolUsuario nvarchar(15) not null
 )
 go
 
-create table TblActividades(
-IdActividad int identity(1,1) primary key not null,
-CodActividad as ('Act'+right('00'+convert(varchar,IdActividad),(2))),
+create table Tbl_Usuarios(
+IDUsuario int identity(1,1) primary key not null,
+_User nvarchar(50) not null,
+_Pass nvarchar(50) not null,
+FechaCreacion datetime not null,
+IdRolesFK int
+constraint FK_Roles_USUARIOS 
+foreign key (IdRolesFK) 
+references Tbl_Roles (IDRol) on delete cascade
+)
+go
+
+create table Tbl_Actividades(
+IDActividad int identity(1,1) primary key not null,
+--CodActividad as ('Act'+right('00'+convert(varchar,IdActividad),(2))),
 DescripcionActividad nvarchar(max) not null,
 NivelActividad nvarchar(10) not null,
 ValorActividad decimal not null,
@@ -36,108 +42,101 @@ NotaActividad nvarchar(max) null,
 )
 go
 
-create table TblDiviciones(
-IdDivicion int identity(1,1) primary key not null,
-CodDivicion as ('Dvc'+right('00'+convert(varchar,IdDivicion),(2))),
-AliasDivicion nvarchar(10) not null,
-NombreDivicion nvarchar(50) not null,
+create table Tbl_Marcas(
+IDMarca int identity(1,1) primary key not null,
+AliasMarca nvarchar(10) not null,
+NombreMarca nvarchar(50) not null,
 )
 go
 
-create table TblSucursales(
-IdSucursal int identity(1,1) not null,
-CodSucursal as ('Scl'+right('00'+convert(varchar,IdSucursal),(2))),
-CodigoSucursal int primary key not null,
+create table Tbl_Sucursales(
+IDSucursal int identity(1,1)primary key  not null,
 NombreSucursal nvarchar(100) not null,
-IdDiviciones int not null,
-constraint FK_Diviciones_SUCURALES 
-foreign key (IdDiviciones) 
-references TblDiviciones (IdDivicion) on delete cascade
+IdMarcasFK int not null,
+constraint FK_Marcas_SUCURALES 
+foreign key (IdMarcasFK) 
+references Tbl_Marcas (IDMarca) on delete cascade
 )
 go
 
-create table TblRegistroActividades(
+create table Tbl_RegistroAct(
 IdRegistro int identity(1,1) primary key not null,
-CodRegistro as ('Rgt'+right('00'+convert(varchar,IdRegistro),(2))),
-CodigoEmpleados int not null,
-IdActividades int not null,
-CodigoSucursal int not null,
-FechaRegistro datetime not null,
-constraint FK_Empleado_REGISTROACTIVIDAD
-foreign key (CodigoEmpleados) 
-references TblEmpleados (CodigoEmpleado) on delete cascade,
-constraint FK_Actividad_REGISTROACTIVIDAD 
-foreign key (IdActividades) 
-references TblActividades (IdActividad) on delete cascade,
-constraint FK_Sucursal_REGISTROACTIVIDAD
-foreign key (CodigoSucursal) 
-references TblSucursales (CodigoSucursal) on delete cascade
+CodigoEmpleadosFK int not null,
+IdActividadesFK int not null,
+IdSucursalesFK int not null,
+Hora time not null,
+Fecha date not null,
+constraint FK_Empleado_REGISTROACT
+foreign key (CodigoEmpleadosFK) 
+references Tbl_Empleados (CodigoEmpleado) on delete cascade,
+constraint FK_Actividad_REGISTROACT
+foreign key (IDActividadesFK) 
+references Tbl_Actividades (IDActividad) on delete cascade,
+constraint FK_Sucursal_REGISTROACT
+foreign key (IdSucursalesFK) 
+references Tbl_Sucursales (IDSucursal) on delete cascade
 )
 go
 -----------------------------------------vistas-------------------------------------------------------
-create or alter view vwEmpleados
+create or alter view VW_Empleados
 as
-select e.CodEmpleado 'ID Empleados',
-       e.CodigoEmpleado 'Codigo Empleado',
-	   e.Nombre,
-	   e.Apellido,
-	   e.Telefono,
-	   e.Email,
-	   e.FechaNacimiento 'Fecha Nacimiento'
-from TblEmpleados e
+select em.CodigoEmpleado 'CodigoEmpleado',
+       em.Nombre,
+	   em.Apellido,
+	   em.Email,
+	   em.Telefono
+from Tbl_Empleados em
 go
 
-create view vwUsuarios
+create or alter view VW_Usuarios
 as
-select u.CodUsuario 'ID Usuarios',
-       u.NombreUsuario 'Nombre Usuario',
-	   u.RolUsuario 'Rol Usuario',
-	   u.FechaCreacion 'Fecha Creacion'
-from TblUsuarios u
+select us._User 'Usuario',
+       ro.RolUsuario 'Rol Usuario',
+	   us.FechaCreacion 'FechaCreacion'
+from Tbl_Usuarios us
+inner join Tbl_Roles ro
+on us.IdRolesFK = ro.IDRol
 go
 
 create view vwActividades
 as
-select a.CodActividad 'ID Actividades ',
-       a.NivelActividad 'Nivel Actividad',
-	   a.ValorActividad 'Valor Actividad',
-	   a.DescripcionActividad 'Descripcion Actividad',
-	   a.NotaActividad 'Nota Actividad'
-from TblActividades a
+select *
+from Tbl_Actividades 
 go
 
-create view vwSucursales
+create or alter  view vwSucursales
 as
-select s.CodSucursal 'ID Sucursales',
-       s.CodigoSucursal 'Codigo Sucursal',
-	   s.NombreSucursal 'Nombre Sucursal',
-	   d.CodDivicion 'ID Diviciones',
-	   d.AliasDivicion 'Alias Divicion'
-from TblSucursales s
-inner join TblDiviciones d
-on s.IdDiviciones = d.IdDivicion
+select *
+from Tbl_Sucursales s
+inner join Tbl_Marcas m
+on s.IdMarcas = m.IDMarca
 go
 
-select r.CodRegistro,
-       r.FechaRegistro,
-	   e.CodigoEmpleado,
-	   e.Nombre,
-	   a.CodActividad,
-	   a.ValorActividad,
-	   a.DescripcionActividad,
-	   s.CodigoSucursal,
-	   s.CodigoSucursal,
-	   s.NombreSucursal,
-	   a.NotaActividad
-from TblRegistroActividades r
-inner join TblEmpleados e
-on r.CodigoEmpleados = e.CodigoEmpleado
-inner join TblActividades a
-on r.IdActividades = a.IdActividad
-inner join TblSucursales s
-on r.CodigoSucursal = s.CodigoSucursal
+create or alter view vwRegistros
+as
+select *
+from Tbl_RegistroAct r
+inner join Tbl_Empleados e
+on r.CodigoEmpleadosFK = e.CodigoEmpleado
+inner join Tbl_Actividades a
+on r.IdActividadesFK = a.IdActividad
+inner join Tbl_Sucursales s
+on r.IdSucursalesFK = s.IDSucursal
 go
 
 
 
-select * from TblSucursales
+select * from Tbl_Usuarios
+
+----------------------------------------------SP----------------------------------------------------
+create or alter proc SP_Login
+@user varchar(50),
+@pass varchar(50)
+as
+select *
+from Tbl_Usuarios 
+where _User = @user and
+      _Pass = @pass 
+go
+
+exec SP_Login 'Admin','yocomo123@'

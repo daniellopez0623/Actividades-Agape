@@ -20,12 +20,15 @@ namespace Negocios
         {
             return ObjEmp_D.BuscarEmpleados_D();
         }
+        public DataTable BuscandoAdminEmpleados_N()
+        {
+            return ObjEmp_D.BuscarAdmEmpleados_D();
+        }
 
         public void GuardandoEmpleados_N()
         {
             ObjEmp_D.GuardarEmpleados_D();
         }
-
         public void EditandoEmpleados_N()
         {
             ObjEmp_D.EditarEmpleados_D();

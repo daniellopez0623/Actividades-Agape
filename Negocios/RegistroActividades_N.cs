@@ -12,6 +12,25 @@ namespace Negocios
     {
         RegistroActividades_D ObjDatos = new RegistroActividades_D();
 
+        public DataTable MostrandoRegistrosIDScl_N()
+        {
+            return ObjDatos.MostrarRegistrosIDScl_D();
+        }
+        public DataTable MostrandoRegistrosIDAct_N()
+        {
+            return ObjDatos.MostrarRegistrosIDAct_D();
+        }
+
+        public DataTable MostrandoAdmRegistros_N()
+        {
+            return ObjDatos.MostrarAdmRegistros_D();
+        }
+
+        public DataTable BuscandoAdmRegistros_N()
+        {
+            return ObjDatos.BuscarAdmRegistros_D();
+        }
+        
         public DataTable MostrandoRegistros_N()
         {
             return ObjDatos.MostrarRegistros_D();

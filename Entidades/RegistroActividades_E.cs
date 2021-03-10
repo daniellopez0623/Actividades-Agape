@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class RegistroActividades_E
+    public static class RegistroActividades_E
     {
-        private int IdRegistro; 
-        private int IdEmpleados;
-        private int IdActividades;
-        private int IdSucursales;
-        private int FechaRegistro;
+        private static int IdRegistro; 
+        private static int CodeEmpleados;
+        private static int IdActividades;
+        private static int IdSucursales;
+        private static DateTime Fecha;
+        private static DateTime Hora;
 
-        public int IdRegistro1 { get => IdRegistro; set => IdRegistro = value; }
-        public int IdEmpleados1 { get => IdEmpleados; set => IdEmpleados = value; }
-        public int IdActividades1 { get => IdActividades; set => IdActividades = value; }
-        public int IdSucursales1 { get => IdSucursales; set => IdSucursales = value; }
-        public int FechaRegistro1 { get => FechaRegistro; set => FechaRegistro = value; }
+        public static int IdRegistro1 { get => IdRegistro; set => IdRegistro = value; }
+        public static int CodeEmpleados1 { get => CodeEmpleados; set => CodeEmpleados = value; }
+        public static int IdActividades1 { get => IdActividades; set => IdActividades = value; }
+        public static int IdSucursales1 { get => IdSucursales; set => IdSucursales = value; }
+        public static DateTime Fecha1 { get => Fecha; set => Fecha = value; }
+        public static DateTime Hora1 { get => Hora; set => Hora = value; }
     }
 }

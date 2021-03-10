@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Diviciones_E
+    public static class Diviciones_E
     {
-        private int IdDivicion;
-        private string AliasDivicion;
-        private string NombreDivicion;
+        private static int IdMarcas;
+        private static string AliasMarcas;
+        private static string NombreMarcas;
 
-        public int IdDivicion1 { get => IdDivicion; set => IdDivicion = value; }
-        public string AliasDivicion1 { get => AliasDivicion; set => AliasDivicion = value; }
-        public string NombreDivicion1 { get => NombreDivicion; set => NombreDivicion = value; }
+        public static int IdMarcas1 { get => IdMarcas; set => IdMarcas = value; }
+        public static string AliasMarcas1 { get => AliasMarcas; set => AliasMarcas = value; }
+        public static string NombreMarcas1 { get => NombreMarcas; set => NombreMarcas = value; }
     }
 }

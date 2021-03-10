@@ -11,7 +11,32 @@ namespace Datos
 {
     public class RegistroActividades_D : Conexion_D
     {
-        RegistroActividades_E ObjRgt_E = new RegistroActividades_E();
+        public DataTable MostrarRegistrosIDScl_D()
+        {
+            cxn.Open();
+            SqlCommand cmd = new SqlCommand("Select * from VW_RegistrosIdScl", cxn);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            cxn.Close();
+            return dt;
+        }
+        public DataTable MostrarRegistrosIDAct_D()
+        {
+            cxn.Open();
+            SqlCommand cmd = new SqlCommand("Select * from VW_RegistrosIdActividad", cxn);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            cxn.Close();
+            return dt;
+        }
 
         public DataTable MostrarRegistros_D()
         {
@@ -26,15 +51,50 @@ namespace Datos
             cxn.Close();
             return dt;
         }
+        public DataTable MostrarAdmRegistros_D()
+        {
+            cxn.Open();
+            SqlCommand cmd = new SqlCommand("Select * from VW_AdmRegistros", cxn);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            cxn.Close();
+            return dt;
+        }
 
         public DataTable BuscarRegistros_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Buscar_Registro", cxn);
+            SqlCommand cmd = new SqlCommand("SP_selectRegistroAct", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@IdRegistro", ObjRgt_E.IdRegistro1);
+            cmd.Parameters.AddWithValue("@CodigoEmpleadosFK", RegistroActividades_E.CodeEmpleados1);
+            cmd.Parameters.AddWithValue("@IdActividadesFK", RegistroActividades_E.IdActividades1); 
+            cmd.Parameters.AddWithValue("@IdSucursalesFK", RegistroActividades_E.IdSucursales1);
+
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter data = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.Fill(tabla);
+
+            cxn.Close();
+            return tabla;
+        }
+        public DataTable BuscarAdmRegistros_D()
+        {
+            SqlCommand cmd = new SqlCommand("SP_selectAdminRegistroAct", cxn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cxn.Open();
+
+            cmd.Parameters.AddWithValue("@CodigoEmpleadosFK", RegistroActividades_E.CodeEmpleados1);
+            cmd.Parameters.AddWithValue("@IdActividadesFK", RegistroActividades_E.IdActividades1);
+            cmd.Parameters.AddWithValue("@IdSucursalesFK", RegistroActividades_E.IdSucursales1);
 
             cmd.ExecuteNonQuery();
 
@@ -48,15 +108,16 @@ namespace Datos
 
         public void GuardarRegistros_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Guardar_Registro", cxn);
+            SqlCommand cmd = new SqlCommand("SP_insertRegistroAct", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@IdEmpleados", ObjRgt_E.IdEmpleados1);
-            cmd.Parameters.AddWithValue("@IdActividades", ObjRgt_E.IdActividades1);
-            cmd.Parameters.AddWithValue("@IdSucursales", ObjRgt_E.IdSucursales1);
-            cmd.Parameters.AddWithValue("@FechaRegistro", ObjRgt_E.FechaRegistro1);
+            cmd.Parameters.AddWithValue("@Hora", RegistroActividades_E.Hora1);
+            cmd.Parameters.AddWithValue("@Fecha", RegistroActividades_E.Fecha1);
+            cmd.Parameters.AddWithValue("@CodigoEmpleadosFK", RegistroActividades_E.CodeEmpleados1);
+            cmd.Parameters.AddWithValue("@IdActividadesFK", RegistroActividades_E.IdActividades1);
+            cmd.Parameters.AddWithValue("@IdSucursalesFK", RegistroActividades_E.IdSucursales1);
 
             cmd.ExecuteNonQuery();
 
@@ -65,32 +126,32 @@ namespace Datos
 
         public void EditarRegistros_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Editar_Registro", cxn);
+            SqlCommand cmd = new SqlCommand("SP_updateRegistoAct", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@IdRegistro", ObjRgt_E.IdRegistro1);
-            cmd.Parameters.AddWithValue("@IdEmpleados", ObjRgt_E.IdEmpleados1);
-            cmd.Parameters.AddWithValue("@IdActividades", ObjRgt_E.IdActividades1);
-            cmd.Parameters.AddWithValue("@IdSucursales", ObjRgt_E.IdSucursales1);
-            cmd.Parameters.AddWithValue("@FechaRegistro", ObjRgt_E.FechaRegistro1);
+            cmd.Parameters.AddWithValue("@IdRegistro", RegistroActividades_E.IdRegistro1);
+            cmd.Parameters.AddWithValue("@Hora", RegistroActividades_E.Hora1);
+            cmd.Parameters.AddWithValue("@Fecha", RegistroActividades_E.Fecha1);
+            cmd.Parameters.AddWithValue("@CodigoEmpleadosFK", RegistroActividades_E.CodeEmpleados1);
+            cmd.Parameters.AddWithValue("@IdActividadesFK", RegistroActividades_E.IdActividades1);
+            cmd.Parameters.AddWithValue("@IdSucursalesFK", RegistroActividades_E.IdSucursales1);
 
             cmd.ExecuteNonQuery();
-
 
             cxn.Close();
         }
 
         public void BorrarRegistros_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Borrar_Registro", cxn);
+            SqlCommand cmd = new SqlCommand("SP_deleteRegistroAct", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@IdRegistro", ObjRgt_E.IdRegistro1);
-            cmd.Parameters.AddWithValue("@IdEmpleados", ObjRgt_E.IdEmpleados1);
+            cmd.Parameters.AddWithValue("@IdRegistro", RegistroActividades_E.IdRegistro1);            
+            cmd.Parameters.AddWithValue("@CodigoEmpleadosFK", RegistroActividades_E.CodeEmpleados1);
 
             cmd.ExecuteNonQuery();
 

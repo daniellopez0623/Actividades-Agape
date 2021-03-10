@@ -11,7 +11,7 @@ namespace Datos
 {
     public class Empleados_D : Conexion_D
     {
-        Empleados_E ObjEmp_E = new Empleados_E();
+       // Empleados_E ObjEmp_E = new Empleados_E();
         
         public DataTable MostrarEmpleados_D()
         {
@@ -27,14 +27,13 @@ namespace Datos
 
             return dt;
         }
-
         public DataTable BuscarEmpleados_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Buscar_Empleados", cxn);
+            SqlCommand cmd = new SqlCommand("SP_selectEmpleados", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
-            cmd.Parameters.AddWithValue("@CodigoEmpleado", ObjEmp_E.CodigoEmpleado1);
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", Empleados_E.CodigoEmpleado1);
            
             cmd.ExecuteNonQuery();
 
@@ -45,38 +44,53 @@ namespace Datos
             cxn.Close();
             return tabla;
         }
+        public DataTable BuscarAdmEmpleados_D()
+        {
+            SqlCommand cmd = new SqlCommand("SP_selectAdmEmpleados", cxn);
+            cmd.CommandType = CommandType.StoredProcedure;
 
+            cxn.Open();
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", Empleados_E.CodigoEmpleado1);
+
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter data = new SqlDataAdapter(cmd);
+            DataTable tabla = new DataTable();
+            data.Fill(tabla);
+
+            cxn.Close();
+            return tabla;
+        }
         public void GuardarEmpleados_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Guardar_Empleados", cxn);
+            SqlCommand cmd = new SqlCommand("SP_insertEmpleados", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@CodigoEmpleado", ObjEmp_E.CodigoEmpleado1);
-            cmd.Parameters.AddWithValue("@Nombre", ObjEmp_E.Nombre1);
-            cmd.Parameters.AddWithValue("@Apellido", ObjEmp_E.Apellido1);
-            cmd.Parameters.AddWithValue("@Email", ObjEmp_E.Email1);
-            cmd.Parameters.AddWithValue("@FechaNacimiento", ObjEmp_E.FechaNacimiento1);
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", Empleados_E.CodigoEmpleado1);
+            cmd.Parameters.AddWithValue("@Nombre", Empleados_E.Nombre1);
+            cmd.Parameters.AddWithValue("@Apellido", Empleados_E.Apellido1);
+            cmd.Parameters.AddWithValue("@Email", Empleados_E.Email1);
+            cmd.Parameters.AddWithValue("@Telefono", Empleados_E.Telefono1);
 
             cmd.ExecuteNonQuery();
 
             cxn.Close();
         }
-
         public void EditarEmpleados_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Editar_Empleados", cxn);
+            SqlCommand cmd = new SqlCommand("SP_updateEmpleados", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@IdEmpleado", ObjEmp_E.IdEmpleado1);
-            cmd.Parameters.AddWithValue("@CodigoEmpleado", ObjEmp_E.CodigoEmpleado1);
-            cmd.Parameters.AddWithValue("@Nombre", ObjEmp_E.Nombre1);
-            cmd.Parameters.AddWithValue("@Apellido", ObjEmp_E.Apellido1);
-            cmd.Parameters.AddWithValue("@Email", ObjEmp_E.Email1);
-            cmd.Parameters.AddWithValue("@FechaNacimiento", ObjEmp_E.FechaNacimiento1);
+            cmd.Parameters.AddWithValue("@idEmpleados", Empleados_E.IdEmpleado1);
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", Empleados_E.CodigoEmpleado1);
+            cmd.Parameters.AddWithValue("@Nombre", Empleados_E.Nombre1);
+            cmd.Parameters.AddWithValue("@Apellido", Empleados_E.Apellido1);
+            cmd.Parameters.AddWithValue("@Email", Empleados_E.Email1);
+            cmd.Parameters.AddWithValue("@Telefono", Empleados_E.Telefono1);
 
             cmd.ExecuteNonQuery();
 
@@ -84,12 +98,13 @@ namespace Datos
         }
         public void BorrarEmpleados_D()
         {
-            SqlCommand cmd = new SqlCommand("SP_Borrar_Empleados", cxn);
+            SqlCommand cmd = new SqlCommand("SP_deleteEmpleados", cxn);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@CodigoEmpleado", ObjEmp_E.CodigoEmpleado1);
+            cmd.Parameters.AddWithValue("@idEmpleados", Empleados_E.IdEmpleado1);
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", Empleados_E.CodigoEmpleado1);
 
             cmd.ExecuteNonQuery();
 

@@ -16,7 +16,7 @@ namespace Negocios
         {
             return ObjAct_D.MostrarActividades_D();
         }
-        public DataTable BuscandActividadeso_N()
+        public DataTable BuscandoActividades_N()
         {
             return ObjAct_D.BuscarActividades_D();
         }
