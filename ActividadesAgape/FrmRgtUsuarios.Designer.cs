@@ -30,6 +30,9 @@ namespace ActividadesAgape
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRgtUsuarios));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -52,18 +55,20 @@ namespace ActividadesAgape
             this.label9 = new System.Windows.Forms.Label();
             this.txtNameUser = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.dataGridViewRol = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRgtUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRol)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePickerUsr
             // 
             this.dateTimePickerUsr.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerUsr.Font = new System.Drawing.Font("Century Gothic", 13.8F);
-            this.dateTimePickerUsr.Location = new System.Drawing.Point(294, 378);
+            this.dateTimePickerUsr.Location = new System.Drawing.Point(182, 462);
             this.dateTimePickerUsr.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerUsr.Name = "dateTimePickerUsr";
-            this.dateTimePickerUsr.Size = new System.Drawing.Size(475, 36);
+            this.dateTimePickerUsr.Size = new System.Drawing.Size(209, 36);
             this.dateTimePickerUsr.TabIndex = 248;
             this.dateTimePickerUsr.Value = new System.DateTime(2021, 5, 3, 0, 0, 0, 0);
             // 
@@ -72,7 +77,7 @@ namespace ActividadesAgape
             this.labelMarca.AutoSize = true;
             this.labelMarca.Font = new System.Drawing.Font("Century Gothic", 13.8F);
             this.labelMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.labelMarca.Location = new System.Drawing.Point(94, 209);
+            this.labelMarca.Location = new System.Drawing.Point(61, 265);
             this.labelMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMarca.Name = "labelMarca";
             this.labelMarca.Size = new System.Drawing.Size(113, 30);
@@ -83,19 +88,20 @@ namespace ActividadesAgape
             // 
             this.txtRol.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.txtRol.Location = new System.Drawing.Point(215, 209);
+            this.txtRol.Location = new System.Drawing.Point(182, 265);
             this.txtRol.Margin = new System.Windows.Forms.Padding(4);
             this.txtRol.Multiline = true;
             this.txtRol.Name = "txtRol";
             this.txtRol.Size = new System.Drawing.Size(123, 31);
             this.txtRol.TabIndex = 341;
+            this.txtRol.Click += new System.EventHandler(this.txtRol_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 13.8F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.label5.Location = new System.Drawing.Point(348, 299);
+            this.label5.Location = new System.Drawing.Point(11, 394);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(165, 30);
@@ -106,10 +112,10 @@ namespace ActividadesAgape
             // 
             this.txtPassUser.Font = new System.Drawing.Font("Century Gothic", 14.2F);
             this.txtPassUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.txtPassUser.Location = new System.Drawing.Point(519, 294);
+            this.txtPassUser.Location = new System.Drawing.Point(182, 389);
             this.txtPassUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassUser.Name = "txtPassUser";
-            this.txtPassUser.Size = new System.Drawing.Size(250, 37);
+            this.txtPassUser.Size = new System.Drawing.Size(209, 37);
             this.txtPassUser.TabIndex = 339;
             // 
             // label7
@@ -117,18 +123,18 @@ namespace ActividadesAgape
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 13.8F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.label7.Location = new System.Drawing.Point(70, 295);
+            this.label7.Location = new System.Drawing.Point(74, 204);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 30);
+            this.label7.Size = new System.Drawing.Size(100, 30);
             this.label7.TabIndex = 338;
-            this.label7.Text = "ID Usuario:";
+            this.label7.Text = "ID User:";
             // 
             // txtIdUser
             // 
             this.txtIdUser.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.txtIdUser.Location = new System.Drawing.Point(215, 294);
+            this.txtIdUser.Location = new System.Drawing.Point(182, 204);
             this.txtIdUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdUser.Multiline = true;
             this.txtIdUser.Name = "txtIdUser";
@@ -173,8 +179,8 @@ namespace ActividadesAgape
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
-            this.btnBuscar.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.color = System.Drawing.Color.Transparent;
             this.btnBuscar.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,7 +190,7 @@ namespace ActividadesAgape
             this.btnBuscar.ImageZoom = 45;
             this.btnBuscar.LabelPosition = 29;
             this.btnBuscar.LabelText = "Buscar";
-            this.btnBuscar.Location = new System.Drawing.Point(933, 370);
+            this.btnBuscar.Location = new System.Drawing.Point(401, 419);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(124, 105);
@@ -193,8 +199,8 @@ namespace ActividadesAgape
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
-            this.btnEditar.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.color = System.Drawing.Color.Transparent;
             this.btnEditar.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -204,7 +210,7 @@ namespace ActividadesAgape
             this.btnEditar.ImageZoom = 48;
             this.btnEditar.LabelPosition = 29;
             this.btnEditar.LabelText = "Editar";
-            this.btnEditar.Location = new System.Drawing.Point(933, 483);
+            this.btnEditar.Location = new System.Drawing.Point(401, 532);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(124, 105);
@@ -213,8 +219,8 @@ namespace ActividadesAgape
             // 
             // btnBorrar
             // 
-            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
-            this.btnBorrar.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnBorrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBorrar.color = System.Drawing.Color.Transparent;
             this.btnBorrar.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
             this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,7 +230,7 @@ namespace ActividadesAgape
             this.btnBorrar.ImageZoom = 45;
             this.btnBorrar.LabelPosition = 29;
             this.btnBorrar.LabelText = "Borrar";
-            this.btnBorrar.Location = new System.Drawing.Point(933, 596);
+            this.btnBorrar.Location = new System.Drawing.Point(401, 645);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(124, 105);
@@ -233,8 +239,8 @@ namespace ActividadesAgape
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
-            this.btnGuardar.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.color = System.Drawing.Color.Transparent;
             this.btnGuardar.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -244,7 +250,7 @@ namespace ActividadesAgape
             this.btnGuardar.ImageZoom = 45;
             this.btnGuardar.LabelPosition = 29;
             this.btnGuardar.LabelText = "Guardar";
-            this.btnGuardar.Location = new System.Drawing.Point(933, 257);
+            this.btnGuardar.Location = new System.Drawing.Point(401, 306);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(124, 105);
@@ -253,8 +259,8 @@ namespace ActividadesAgape
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
-            this.btnNuevo.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.color = System.Drawing.Color.Transparent;
             this.btnNuevo.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,7 +270,7 @@ namespace ActividadesAgape
             this.btnNuevo.ImageZoom = 45;
             this.btnNuevo.LabelPosition = 29;
             this.btnNuevo.LabelText = "Nuevo";
-            this.btnNuevo.Location = new System.Drawing.Point(933, 144);
+            this.btnNuevo.Location = new System.Drawing.Point(401, 193);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(124, 105);
@@ -280,49 +286,50 @@ namespace ActividadesAgape
             this.dataGridViewRgtUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewRgtUser.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewRgtUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRgtUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRgtUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewRgtUser.ColumnHeadersHeight = 50;
             this.dataGridViewRgtUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewRgtUser.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRgtUser.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewRgtUser.EnableHeadersVisualStyles = false;
-            this.dataGridViewRgtUser.Location = new System.Drawing.Point(15, 483);
+            this.dataGridViewRgtUser.Location = new System.Drawing.Point(533, 193);
             this.dataGridViewRgtUser.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewRgtUser.Name = "dataGridViewRgtUser";
             this.dataGridViewRgtUser.ReadOnly = true;
             this.dataGridViewRgtUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRgtUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRgtUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewRgtUser.RowHeadersWidth = 51;
             this.dataGridViewRgtUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewRgtUser.Size = new System.Drawing.Size(896, 364);
+            this.dataGridViewRgtUser.Size = new System.Drawing.Size(649, 640);
             this.dataGridViewRgtUser.TabIndex = 328;
+            this.dataGridViewRgtUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRgtUser_CellContentClick);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 13.8F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.label9.Location = new System.Drawing.Point(392, 214);
+            this.label9.Location = new System.Drawing.Point(68, 330);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(106, 30);
@@ -333,10 +340,10 @@ namespace ActividadesAgape
             // 
             this.txtNameUser.Font = new System.Drawing.Font("Century Gothic", 14.2F);
             this.txtNameUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.txtNameUser.Location = new System.Drawing.Point(519, 209);
+            this.txtNameUser.Location = new System.Drawing.Point(182, 323);
             this.txtNameUser.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameUser.Name = "txtNameUser";
-            this.txtNameUser.Size = new System.Drawing.Size(250, 37);
+            this.txtNameUser.Size = new System.Drawing.Size(209, 37);
             this.txtNameUser.TabIndex = 344;
             // 
             // label10
@@ -344,12 +351,59 @@ namespace ActividadesAgape
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 13.8F);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.label10.Location = new System.Drawing.Point(70, 378);
+            this.label10.Location = new System.Drawing.Point(29, 462);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(210, 30);
+            this.label10.Size = new System.Drawing.Size(145, 30);
             this.label10.TabIndex = 346;
-            this.label10.Text = "Fecha creacion:";
+            this.label10.Text = "Fecha Cre:";
+            // 
+            // dataGridViewRol
+            // 
+            this.dataGridViewRol.AllowUserToDeleteRows = false;
+            this.dataGridViewRol.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewRol.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewRol.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewRol.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewRol.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewRol.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRol.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewRol.ColumnHeadersHeight = 50;
+            this.dataGridViewRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRol.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewRol.EnableHeadersVisualStyles = false;
+            this.dataGridViewRol.Location = new System.Drawing.Point(47, 545);
+            this.dataGridViewRol.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewRol.Name = "dataGridViewRol";
+            this.dataGridViewRol.ReadOnly = true;
+            this.dataGridViewRol.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRol.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewRol.RowHeadersWidth = 51;
+            this.dataGridViewRol.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewRol.Size = new System.Drawing.Size(346, 217);
+            this.dataGridViewRol.TabIndex = 347;
+            this.dataGridViewRol.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRol_CellContentClick);
             // 
             // FrmRgtUsuarios
             // 
@@ -357,6 +411,7 @@ namespace ActividadesAgape
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1072, 857);
+            this.Controls.Add(this.dataGridViewRol);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtNameUser);
@@ -383,6 +438,7 @@ namespace ActividadesAgape
             this.Load += new System.EventHandler(this.FrmRgtUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRgtUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRol)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,5 +464,6 @@ namespace ActividadesAgape
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNameUser;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dataGridViewRol;
     }
 }

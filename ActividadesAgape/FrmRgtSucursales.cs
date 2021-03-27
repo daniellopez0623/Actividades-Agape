@@ -78,11 +78,15 @@ namespace ActividadesAgape
                 Sucursales_E.IdSucursal1 = int.Parse(txtScl.Text);
                 Sucursales_E.IdDiviciones1 = int.Parse(txtMarca.Text);
 
-                objScl_N.BorrandoSucursales_N();
+                if (MessageBox.Show("Esta seguro que quiere eliminar el registro.", "Advertencia",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+
+                    objScl_N.BorrandoSucursales_N();
+
+                MessageBox.Show("Registro Eliminado");
 
                 dataGridViewSclRgt.DataSource = objScl_N.MostrandoAdmSucursales_N();
 
-                MessageBox.Show("Registro Eliminado");
 
             }
             catch (Exception error)
@@ -125,12 +129,7 @@ namespace ActividadesAgape
                 MessageBox.Show($"ERROR: {error.Message}");
             }
         }
-
-        private void labelMarca_Click(object sender, EventArgs e)
-        {
-            dataGridViewIDMarc.Visible = true;
-        }
-
+      
         private void dataGridViewSclRgt_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -155,6 +154,11 @@ namespace ActividadesAgape
             {
                 MessageBox.Show($"ERROR: {error.Message}");
             }
+        }
+
+        private void txtMarca_Click(object sender, EventArgs e)
+        {
+            dataGridViewIDMarc.Visible = true;
         }
     }
 }

@@ -47,7 +47,7 @@ namespace ActividadesAgape
         }
         private void DatosUser()
         {
-           labelUser.Text = ($" {Usuarios_E.User1} ");
+            labelUser.Text = ($" {Usuarios_E.User1} ");
             labelRol.Text = ($" ({Usuarios_E.NombreRol}).");
         }
         private void DateLabels()
@@ -68,6 +68,8 @@ namespace ActividadesAgape
             if (MessageBox.Show("Esta seguro que quiere cerrar sesion ", "Advertencia",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 this.Close();
+
+            
         }
 
         private void ButtonAcerca_Click(object sender, EventArgs e)
@@ -87,7 +89,7 @@ namespace ActividadesAgape
 
         private void ButtonRegistrar_Click(object sender, EventArgs e)
         {
-            OpenPanelConten(new FrmRegistros());
+            OpenPanelConten(new FrmVWRegistros());
         }
 
         private void ButtonActividades_Click(object sender, EventArgs e)
@@ -116,7 +118,7 @@ namespace ActividadesAgape
         }
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            if(bunifuGradientPanel1.Width == 312)
+            if (bunifuGradientPanel1.Width == 312)
             {
                 bunifuGradientPanel1.Visible = false;
                 bunifuGradientPanel1.Width = 95;
@@ -137,14 +139,23 @@ namespace ActividadesAgape
                 backAni.Show(bunifuGradientPanel1);
             }
             PanelTools.Visible = false;
-        }
-        private void ButtonTools_Click(object sender, EventArgs e)
-        {
-           // if (ButtonTools += DoubleClick)
-            
-                PanelTools.Visible = true;
 
-          
+        }
+        private void ButtonTools_Click(object sender, EventArgs e) //Handles
+        {
+           
+            PanelTools.Visible = true;
+        }
+         
+        private void bunifuGradientPanel1_MouseLeave(object sender, EventArgs e)
+        {
+          //  PanelTools.Visible = false;
+
+        }
+
+        private void PanelTools_MouseLeave(object sender, EventArgs e)
+        {
+           // PanelTools.Visible = false;
         }
     }
 }

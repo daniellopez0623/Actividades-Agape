@@ -19,28 +19,22 @@ namespace ActividadesAgape
         {
             InitializeComponent();
         }
-
+        private void NuevoVW()
+        {
+            foreach (Control tool in Controls)
+            {
+                if (tool is TextBox)
+                {
+                    tool.Text = "";
+                }
+            }
+        }
         private void FrmVWRegistros_Load(object sender, EventArgs e)
         {
             //
             dataGridViewIDAct.Visible = false;
             dataGridViewIDScl.Visible = false;
-            dataGridViewScl.DataSource = objRgtN.MostrandoAdmRegistros_N();
-        }
-
-        private void labelIDScl_Click(object sender, EventArgs e)
-        {
-            dataGridViewIDAct.Visible = false;
-            dataGridViewIDScl.DataSource = objRgtN.MostrandoRegistrosIDScl_N();
-            dataGridViewIDScl.Visible = true;
-        }
-
-        private void labelIDAct_Click(object sender, EventArgs e)
-        {
-            dataGridViewIDScl.Visible = false;
-            dataGridViewIDAct.DataSource = objRgtN.MostrandoRegistrosIDAct_N();
-            dataGridViewIDAct.Visible = true;
-
+            dataGridVWRgt.DataSource = objRgtN.MostrandoAdmRegistros_N();
         }
 
         private void labelCodEm_Click(object sender, EventArgs e)
@@ -74,12 +68,68 @@ namespace ActividadesAgape
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                RegistroActividades_E.IdActividades1 = int.Parse(txtIDAct.Text);
+                RegistroActividades_E.IdSucursales1 = int.Parse(txtIDScl.Text);
+                RegistroActividades_E.CodeEmpleados1 = int.Parse(txtCodEmp.Text);
 
+                dataGridVWRgt.DataSource = objRgtN.BuscandoRegistros_N();
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"ERROR: {error.Message}");
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            NuevoVW();
+            dataGridViewIDAct.Visible = false;
+            dataGridViewIDScl.Visible = false;
+        }
+        private Form OpenContenedor;
 
+        private void OpenPanelConten(Form OpenFrm)
+        {
+            if (OpenContenedor != null)
+            {
+                OpenContenedor.Close();
+            }
+            OpenContenedor = OpenFrm;
+            OpenFrm.TopLevel = false;
+            OpenFrm.FormBorderStyle = FormBorderStyle.None;
+            OpenFrm.Dock = DockStyle.Fill;
+            panelRgtVW.Controls.Add(OpenFrm);
+            panelRgtVW.Tag = OpenFrm;
+            OpenFrm.BringToFront();
+            OpenFrm.Show();
+        }
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            OpenPanelConten(new FrmRegistros());
+
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            OpenPanelConten(new FrmRegistrosAdm());
+
+        }
+             
+        private void txtIDScl_Click(object sender, EventArgs e)
+        {
+            dataGridViewIDAct.Visible = false;
+            dataGridViewIDScl.DataSource = objRgtN.MostrandoRegistrosIDScl_N();
+            dataGridViewIDScl.Visible = true;
+        }
+
+        private void txtIDAct_Click(object sender, EventArgs e)
+        {
+            dataGridViewIDScl.Visible = false;
+            dataGridViewIDAct.DataSource = objRgtN.MostrandoRegistrosIDAct_N();
+            dataGridViewIDAct.Visible = true;
         }
     }
 }

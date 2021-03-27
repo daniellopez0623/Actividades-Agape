@@ -53,7 +53,7 @@ namespace ActividadesAgape
                 Usuarios_E.User1 = txtNameUser.Text;
                 Usuarios_E.Pass1 = txtPassUser.Text;
                 Usuarios_E.FechaCreacion1 = DateTime.Parse(dateTimePickerUsr.Text);
-                Usuarios_E.NombreRol = txtRol.Text;
+                Usuarios_E.Idrol1 = int.Parse(txtRol.Text);
 
                 objUser_N.EditandoUsuarios_N();
 
@@ -75,11 +75,14 @@ namespace ActividadesAgape
                 Usuarios_E.IdUsuario1 = int.Parse(txtIdUser.Text);
                 Usuarios_E.User1 = txtNameUser.Text;
 
+                if (MessageBox.Show("Esta seguro que quiere eliminar el registro.", "Advertencia",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+
                 objUser_N.BorrandoUsuarios_N();
 
-                dataGridViewRgtUser.DataSource = objUser_N.MostrandoUsuarios_N();
+                MessageBox.Show("Registro Eliminado");
 
-                MessageBox.Show("Registro Borrado");
+                dataGridViewRgtUser.DataSource = objUser_N.MostrandoUsuarios_N();
 
             }
             catch (Exception error)
@@ -87,7 +90,6 @@ namespace ActividadesAgape
                 MessageBox.Show($"ERROR: {error.Message}");
             }
         }
-
         private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             try
@@ -95,21 +97,19 @@ namespace ActividadesAgape
                 Usuarios_E.User1 = txtNameUser.Text;
                 Usuarios_E.Pass1 = txtPassUser.Text;
                 Usuarios_E.FechaCreacion1 = DateTime.Parse(dateTimePickerUsr.Text);
-                Usuarios_E.NombreRol = txtRol.Text;
+                Usuarios_E.Idrol1 = int.Parse( txtRol.Text);
 
                 objUser_N.GuardandoUsuarios_N();
 
                 dataGridViewRgtUser.DataSource = objUser_N.MostrandoUsuarios_N();
 
                 MessageBox.Show("Registro Guardado");
-
             }
             catch (Exception error)
             {
                 MessageBox.Show($"ERROR: {error.Message}");
             }
         }
-
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             try
@@ -118,6 +118,39 @@ namespace ActividadesAgape
 
                 dataGridViewRgtUser.DataSource = objUser_N.BuscandoAdmUsuarios_N();
 
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"ERROR: {error.Message}");
+            }
+        }
+
+        private void dataGridViewRgtUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                //  txtRol.Text = dataGridViewRol.CurrentRow.Cells[0].Value.ToString(); 
+                //  txtRol.Text = dataGridViewRol.CurrentRow.Cells[0].Value.ToString(); 
+                //  txtRol.Text = dataGridViewRol.CurrentRow.Cells[0].Value.ToString(); 
+                //  txtRol.Text = dataGridViewRol.CurrentRow.Cells[0].Value.ToString(); 
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"ERROR: {error.Message}");
+            }
+        }
+      
+        private void txtRol_Click(object sender, EventArgs e)
+        {
+            dataGridViewRol.DataSource = objUser_N.MostrandoRoles_D();
+            dataGridViewRol.Visible = true;
+        }
+
+        private void dataGridViewRol_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtRol.Text = dataGridViewRol.CurrentRow.Cells[0].Value.ToString();
             }
             catch (Exception error)
             {

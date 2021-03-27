@@ -11,12 +11,23 @@ namespace Datos
 {
     public class Usuarios_D : Conexion_D
     {
-       // Usuarios_E ObjUsrE = new Usuarios_E();
-
         public DataTable MostrarUsuarios_D()
         {
             cxn.Open();
-            SqlCommand cmd = new SqlCommand("Select * from vwUsuarios", cxn);
+            SqlCommand cmd = new SqlCommand("Select * from vwAdmUser", cxn);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            da.Fill(dt);
+
+            cxn.Close();
+            return dt;
+        }
+        public DataTable MostrarRoles_D()
+        {
+            cxn.Open();
+            SqlCommand cmd = new SqlCommand("Select * from vwRoles", cxn);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -69,7 +80,7 @@ namespace Datos
 
             cxn.Open();
 
-            cmd.Parameters.AddWithValue("@idRoles", Usuarios_E.User1);
+            cmd.Parameters.AddWithValue("@idRoles", Usuarios_E.Idrol1);
             cmd.Parameters.AddWithValue("@user", Usuarios_E.User1);
             cmd.Parameters.AddWithValue("@pass", Usuarios_E.Pass1);
             cmd.Parameters.AddWithValue("@FechaCreacion", Usuarios_E.FechaCreacion1);
@@ -87,10 +98,10 @@ namespace Datos
             cxn.Open();
 
              cmd.Parameters.AddWithValue("@idUsuarios", Usuarios_E.IdUsuario1);
-             cmd.Parameters.AddWithValue("@idRoles", Usuarios_E.User1);
-             cmd.Parameters.AddWithValue("@user", Usuarios_E.User1);
-             cmd.Parameters.AddWithValue("@pass", Usuarios_E.Pass1);
-             cmd.Parameters.AddWithValue("@FechaCreacion", Usuarios_E.FechaCreacion1);
+            cmd.Parameters.AddWithValue("@idRoles", Usuarios_E.Idrol1);
+            cmd.Parameters.AddWithValue("@user", Usuarios_E.User1);
+            cmd.Parameters.AddWithValue("@pass", Usuarios_E.Pass1);
+            cmd.Parameters.AddWithValue("@FechaCreacion", Usuarios_E.FechaCreacion1);
 
             cmd.ExecuteNonQuery();
 

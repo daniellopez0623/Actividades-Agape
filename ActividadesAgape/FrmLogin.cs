@@ -39,10 +39,12 @@ namespace ActividadesAgape
                     Usuarios_E.User1 = dt.Rows[0][0].ToString();
                     Usuarios_E.Pass1 = dt.Rows[0][1].ToString();
                     Usuarios_E.NombreRol = dt.Rows[0][2].ToString();
-                   // Usuarios_E.FechaCreacion1 = DateTime.Parse(dt.Rows[0][3].ToString());
+                    // Usuarios_E.FechaCreacion1 = DateTime.Parse(dt.Rows[0][3].ToString());
                     //Usuarios_E.RolUsuario = int.Parse(dt.Rows[0][5].ToString());
                     //Usuarios_E.RolUsuario1 = int.Parse(dt.Rows[0][6].ToString());
-                   // Usuarios_E.NombreRol = dt.Rows[0][7].ToString();
+                    // Usuarios_E.NombreRol = dt.Rows[0][7].ToString();
+                   // Usuarios_E.NombreRol = int.Parse(txtRol.Text);
+
 
 
 

@@ -58,27 +58,14 @@ namespace ActividadesAgape
                 MessageBox.Show($"ERROR: {error.Message}");
             }
         }
-
-        private void btnBorrar_Click(object sender, EventArgs e)
+          
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Empleados_E.IdEmpleado1 = int.Parse(txtIDEmp.Text);
-                Empleados_E.CodigoEmpleado1 = int.Parse(txtCodigoEmpleado.Text);
-
-                objEmp_N.BorrandoEmpleados_N();
-
-                dataGridViewEmpRgt.DataSource = objEmp_N.BuscandoAdminEmpleados_N();
-
-                MessageBox.Show("Registro Borrado");
-            }
-            catch (Exception error)
-            {
-                MessageBox.Show($"ERROR: {error.Message}");
-            }
+            Nuevo();
+            dataGridViewEmpRgt.DataSource = objEmp_N.MostrandoEmpleados_N();
         }
 
-        private void btnEditar_Click_1(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -102,13 +89,22 @@ namespace ActividadesAgape
             }
         }
 
-        private void btnBuscar_Click_1(object sender, EventArgs e)
+        private void btnBorrar_Click_1(object sender, EventArgs e)
         {
             try
             {
+                Empleados_E.IdEmpleado1 = int.Parse(txtIDEmp.Text);
                 Empleados_E.CodigoEmpleado1 = int.Parse(txtCodigoEmpleado.Text);
 
+                if (MessageBox.Show("Esta seguro que quiere eliminar el registro.", "Advertencia",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+
+                    objEmp_N.BorrandoEmpleados_N();
+
+                MessageBox.Show("Registro Eliminado");
+
                 dataGridViewEmpRgt.DataSource = objEmp_N.BuscandoAdminEmpleados_N();
+
             }
             catch (Exception error)
             {
@@ -116,7 +112,7 @@ namespace ActividadesAgape
             }
         }
 
-        private void btnGuardar_Click_1(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -138,21 +134,18 @@ namespace ActividadesAgape
                 MessageBox.Show($"ERROR: {error.Message}");
             }
         }
-
-        private void btnNuevo_Click_1(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Nuevo();
-            dataGridViewEmpRgt.DataSource = objEmp_N.MostrandoEmpleados_N();
-        }
+            try
+            {
+                Empleados_E.CodigoEmpleado1 = int.Parse(txtCodigoEmpleado.Text);
 
-        private void dataGridViewEmpRgt_RowHeaderCellChanged(object sender, DataGridViewRowEventArgs e)
-        {
-
-        }
-
-        private void dataGridViewEmpRgt_RowHeadersWidthSizeModeChanged(object sender, DataGridViewAutoSizeModeEventArgs e)
-        {
-
+                dataGridViewEmpRgt.DataSource = objEmp_N.BuscandoAdminEmpleados_N();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"ERROR: {error.Message}");
+            }
         }
     }
 }

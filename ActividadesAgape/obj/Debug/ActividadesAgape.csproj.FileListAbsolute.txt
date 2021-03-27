@@ -60,3 +60,4 @@ C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\Ac
 C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmUsers.resources
 C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmVWRegistros.resources
 C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmRegistrosAdm.resources
+C:\Users\Daniel Lopez\Desktop\TI\Actividades-Agape\ActividadesAgape\obj\Debug\ActividadesAgape.FrmAcerca.resources

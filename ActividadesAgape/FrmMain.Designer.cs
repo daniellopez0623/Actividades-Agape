@@ -113,6 +113,7 @@ namespace ActividadesAgape
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(285, 857);
             this.bunifuGradientPanel1.TabIndex = 0;
+            this.bunifuGradientPanel1.MouseLeave += new System.EventHandler(this.bunifuGradientPanel1_MouseLeave);
             // 
             // PanelTools
             // 
@@ -126,6 +127,7 @@ namespace ActividadesAgape
             this.PanelTools.Name = "PanelTools";
             this.PanelTools.Size = new System.Drawing.Size(258, 244);
             this.PanelTools.TabIndex = 248;
+            this.PanelTools.MouseLeave += new System.EventHandler(this.PanelTools_MouseLeave);
             // 
             // ButtonUsuarios
             // 
@@ -632,7 +634,7 @@ namespace ActividadesAgape
             // panelMain2
             // 
             this.panelMain2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelMain2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(60)))));
+            this.panelMain2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
             this.panelMain2.Controls.Add(this.pictureBoxLogo);
             this.backAni.SetDecoration(this.panelMain2, BunifuAnimatorNS.DecorationType.None);
             this.Animacion.SetDecoration(this.panelMain2, BunifuAnimatorNS.DecorationType.None);

@@ -88,9 +88,12 @@ namespace ActividadesAgape
             {
                 Actividades_E.IdActividad1 = int.Parse(txtIdAct.Text);
 
-                objActN.BorrandoActividades_N();
+                if (MessageBox.Show("Esta seguro que quiere eliminar el registro.", "Advertencia",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
 
-                MessageBox.Show("Registro Elimidado");
+               objActN.BorrandoActividades_N();
+
+               MessageBox.Show("Registro Elimidado");
 
                 dataGridViewActRgt.DataSource = objActN.MostrandoActividades_N();
 

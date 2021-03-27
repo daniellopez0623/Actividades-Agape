@@ -41,7 +41,7 @@ namespace Datos
         public DataTable MostrarRegistros_D()
         {
             cxn.Open();
-            SqlCommand cmd = new SqlCommand("Select * from VW_Registros", cxn);
+            SqlCommand cmd = new SqlCommand("Select * from VWRegistros", cxn);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -54,7 +54,7 @@ namespace Datos
         public DataTable MostrarAdmRegistros_D()
         {
             cxn.Open();
-            SqlCommand cmd = new SqlCommand("Select * from VW_AdmRegistros", cxn);
+            SqlCommand cmd = new SqlCommand("Select * from VWAdmRegistros", cxn);
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

@@ -57,7 +57,7 @@ namespace ActividadesAgape
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 13.8F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.label9.Location = new System.Drawing.Point(541, 196);
+            this.label9.Location = new System.Drawing.Point(41, 393);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(202, 30);
@@ -68,10 +68,11 @@ namespace ActividadesAgape
             // 
             this.txtNameMarca.Font = new System.Drawing.Font("Century Gothic", 14.2F);
             this.txtNameMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.txtNameMarca.Location = new System.Drawing.Point(751, 196);
+            this.txtNameMarca.Location = new System.Drawing.Point(44, 429);
             this.txtNameMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNameMarca.Multiline = true;
             this.txtNameMarca.Name = "txtNameMarca";
-            this.txtNameMarca.Size = new System.Drawing.Size(294, 37);
+            this.txtNameMarca.Size = new System.Drawing.Size(236, 63);
             this.txtNameMarca.TabIndex = 350;
             // 
             // labelMarca
@@ -79,22 +80,22 @@ namespace ActividadesAgape
             this.labelMarca.AutoSize = true;
             this.labelMarca.Font = new System.Drawing.Font("Century Gothic", 13.8F);
             this.labelMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.labelMarca.Location = new System.Drawing.Point(20, 196);
+            this.labelMarca.Location = new System.Drawing.Point(39, 323);
             this.labelMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMarca.Name = "labelMarca";
-            this.labelMarca.Size = new System.Drawing.Size(129, 30);
+            this.labelMarca.Size = new System.Drawing.Size(97, 30);
             this.labelMarca.TabIndex = 349;
-            this.labelMarca.Text = "ID Marca:";
+            this.labelMarca.Text = "ID Mrc:";
             // 
             // txtIDMarca
             // 
             this.txtIDMarca.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.txtIDMarca.Location = new System.Drawing.Point(157, 196);
+            this.txtIDMarca.Location = new System.Drawing.Point(144, 322);
             this.txtIDMarca.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDMarca.Multiline = true;
             this.txtIDMarca.Name = "txtIDMarca";
-            this.txtIDMarca.Size = new System.Drawing.Size(106, 31);
+            this.txtIDMarca.Size = new System.Drawing.Size(136, 31);
             this.txtIDMarca.TabIndex = 348;
             // 
             // label7
@@ -102,7 +103,7 @@ namespace ActividadesAgape
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 13.8F);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.label7.Location = new System.Drawing.Point(285, 196);
+            this.label7.Location = new System.Drawing.Point(61, 252);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 30);
@@ -113,18 +114,18 @@ namespace ActividadesAgape
             // 
             this.txtAlias.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.txtAlias.Location = new System.Drawing.Point(368, 196);
+            this.txtAlias.Location = new System.Drawing.Point(144, 252);
             this.txtAlias.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlias.Multiline = true;
             this.txtAlias.Name = "txtAlias";
-            this.txtAlias.Size = new System.Drawing.Size(147, 31);
+            this.txtAlias.Size = new System.Drawing.Size(136, 31);
             this.txtAlias.TabIndex = 346;
             // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(718, 10);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(491, 73);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(340, 127);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,8 +134,8 @@ namespace ActividadesAgape
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
-            this.btnBuscar.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.color = System.Drawing.Color.Transparent;
             this.btnBuscar.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -144,7 +145,7 @@ namespace ActividadesAgape
             this.btnBuscar.ImageZoom = 45;
             this.btnBuscar.LabelPosition = 29;
             this.btnBuscar.LabelText = "Buscar";
-            this.btnBuscar.Location = new System.Drawing.Point(921, 516);
+            this.btnBuscar.Location = new System.Drawing.Point(315, 443);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(124, 105);
@@ -153,8 +154,8 @@ namespace ActividadesAgape
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
-            this.btnEditar.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.color = System.Drawing.Color.Transparent;
             this.btnEditar.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,7 +165,7 @@ namespace ActividadesAgape
             this.btnEditar.ImageZoom = 48;
             this.btnEditar.LabelPosition = 29;
             this.btnEditar.LabelText = "Editar";
-            this.btnEditar.Location = new System.Drawing.Point(921, 629);
+            this.btnEditar.Location = new System.Drawing.Point(315, 556);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(124, 105);
@@ -173,8 +174,8 @@ namespace ActividadesAgape
             // 
             // btnBorrar
             // 
-            this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
-            this.btnBorrar.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnBorrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBorrar.color = System.Drawing.Color.Transparent;
             this.btnBorrar.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
             this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,7 +185,7 @@ namespace ActividadesAgape
             this.btnBorrar.ImageZoom = 45;
             this.btnBorrar.LabelPosition = 29;
             this.btnBorrar.LabelText = "Borrar";
-            this.btnBorrar.Location = new System.Drawing.Point(921, 742);
+            this.btnBorrar.Location = new System.Drawing.Point(315, 669);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(124, 105);
@@ -193,8 +194,8 @@ namespace ActividadesAgape
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
-            this.btnGuardar.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnGuardar.BackColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.color = System.Drawing.Color.Transparent;
             this.btnGuardar.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -204,7 +205,7 @@ namespace ActividadesAgape
             this.btnGuardar.ImageZoom = 45;
             this.btnGuardar.LabelPosition = 29;
             this.btnGuardar.LabelText = "Guardar";
-            this.btnGuardar.Location = new System.Drawing.Point(921, 403);
+            this.btnGuardar.Location = new System.Drawing.Point(315, 330);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(124, 105);
@@ -213,8 +214,8 @@ namespace ActividadesAgape
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
-            this.btnNuevo.color = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(147)))), ((int)(((byte)(181)))));
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.color = System.Drawing.Color.Transparent;
             this.btnNuevo.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(183)))), ((int)(((byte)(225)))));
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,7 +225,7 @@ namespace ActividadesAgape
             this.btnNuevo.ImageZoom = 45;
             this.btnNuevo.LabelPosition = 29;
             this.btnNuevo.LabelText = "Nuevo";
-            this.btnNuevo.Location = new System.Drawing.Point(921, 290);
+            this.btnNuevo.Location = new System.Drawing.Point(315, 217);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(124, 105);
@@ -259,7 +260,7 @@ namespace ActividadesAgape
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewMarcas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewMarcas.EnableHeadersVisualStyles = false;
-            this.dataGridViewMarcas.Location = new System.Drawing.Point(17, 290);
+            this.dataGridViewMarcas.Location = new System.Drawing.Point(491, 217);
             this.dataGridViewMarcas.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewMarcas.Name = "dataGridViewMarcas";
             this.dataGridViewMarcas.ReadOnly = true;
@@ -274,14 +275,15 @@ namespace ActividadesAgape
             this.dataGridViewMarcas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewMarcas.RowHeadersWidth = 51;
             this.dataGridViewMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewMarcas.Size = new System.Drawing.Size(859, 557);
+            this.dataGridViewMarcas.Size = new System.Drawing.Size(552, 557);
             this.dataGridViewMarcas.TabIndex = 352;
+            this.dataGridViewMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMarcas_CellContentClick);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(101, 39);
+            this.label8.Location = new System.Drawing.Point(36, 125);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(341, 47);
@@ -296,7 +298,7 @@ namespace ActividadesAgape
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Black;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(99, 89);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(34, 175);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(340, 10);
@@ -326,6 +328,7 @@ namespace ActividadesAgape
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMarcas";
             this.Text = "FrmMarcas";
+            this.Load += new System.EventHandler(this.FrmMarcas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarcas)).EndInit();
             this.ResumeLayout(false);

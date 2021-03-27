@@ -144,6 +144,7 @@
     <Compile Include="Actividades_D.cs" />
     <Compile Include="Conexion_D.cs" />
     <Compile Include="Empleados_D.cs" />
+    <Compile Include="Marcas_D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistroActividades_D.cs" />
     <Compile Include="Sucursales_D.cs" />

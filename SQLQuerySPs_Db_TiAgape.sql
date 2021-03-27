@@ -1,6 +1,6 @@
 USE [Db_TiAgape]
 GO
-
+--Empleados
 CREATE PROC SP_updateEmpleados
 @idEmpleados INT
 ,@CodigoEmpleado INT
@@ -60,7 +60,7 @@ SELECT E.CodigoEmpleado,
 	   E.Telefono,
 	   E.Email
 FROM [dbo].[Tbl_Empleados] AS E
-WHERE CodigoEmpleado  LIKE @CodigoEmpleado + '%'
+WHERE CodigoEmpleado  LIKE @CodigoEmpleado 
 GO
 
 CREATE OR ALTER PROC SP_selectAdmEmpleados
@@ -224,7 +224,7 @@ SELECT M.IDMarca,
 GO
 
 ------------------------------SPs--Marcas--------------------
-CREATE PROCEDURE SP_updateMarcas
+CREATE OR ALTER PROCEDURE SP_updateMarcas
 @idMarcas INT,
 @AliasMarca NVARCHAR(10),
 @NombreMarca NVARCHAR(50)
@@ -235,7 +235,7 @@ UPDATE [dbo].[Tbl_Marcas]
  WHERE IDMarca = @idMarcas
 GO
  
-CREATE PROCEDURE SP_insertMarcas
+CREATE OR ALTER PROCEDURE SP_insertMarcas
 @AliasMarca NVARCHAR(10),
 @NombreMarca NVARCHAR(50)
 AS
@@ -247,7 +247,7 @@ INSERT INTO [dbo].[Tbl_Marcas]
            ,@NombreMarca)
 GO
 
-CREATE PROCEDURE SP_deleteMarcas
+CREATE OR ALTER PROCEDURE SP_deleteMarcas
 @idMarcas INT,
 @AliasMarca NVARCHAR(10)
 AS
@@ -261,13 +261,12 @@ CREATE OR ALTER PROCEDURE SP_selectMarcas
 AS
 SELECT *
   FROM [dbo].[Tbl_Marcas]
-  WHERE AliasMarca LIKE @AliasMarca + '%'
+  WHERE AliasMarca LIKE @AliasMarca 
 GO
 
-CREATE VIEW VW_Marcas
+CREATE VIEW vwMarcas
 AS
-SELECT [AliasMarca]
-      ,[NombreMarca]
+SELECT *
   FROM [dbo].[Tbl_Marcas]
 GO
 
@@ -305,6 +304,8 @@ INSERT INTO [dbo].[Tbl_Usuarios]
            ,@idRoles)
 GO
 
+EXEC  SP_insertUsuario 2,'SMatos','SMatos123**','2020-03-25'
+
 CREATE OR ALTER PROCEDURE SP_deleteUsuarios
 @idUsuarios INT,
 @user NVARCHAR(50)
@@ -322,8 +323,19 @@ INNER JOIN [dbo].[Tbl_Roles] AS R
   ON U.IdRolesFK = R.IDRol
 GO
 
+CREATE VIEW vwAdmUser
+AS
+SELECT *
+  FROM [dbo].[Tbl_Usuarios] AS U
+INNER JOIN [dbo].[Tbl_Roles] AS R
+  ON U.IdRolesFK = R.IDRol
+GO
+
+CREATE VIEW vwRoles
+AS
 SELECT *
   FROM  [dbo].[Tbl_Roles] 
+GO
 
 CREATE OR ALTER PROC SP_selectAdmUsuarios
 @user NVARCHAR(50)
@@ -356,8 +368,8 @@ CREATE OR ALTER PROCEDURE SP_updateRegistoAct
 @CodigoEmpleadosFK INT,
 @IdActividadesFK INT,
 @IdSucursalesFK INT,
-@Hora NVARCHAR(10),
-@Fecha NVARCHAR(10)
+@Hora time,
+@Fecha date
 AS
 UPDATE [dbo].[Tbl_RegistroAct]
    SET [IdActividadesFK] = @IdActividadesFK
@@ -372,8 +384,8 @@ CREATE OR ALTER PROCEDURE SP_insertRegistroAct
 @CodigoEmpleadosFK INT,
 @IdActividadesFK INT,
 @IdSucursalesFK INT,
-@Hora NVARCHAR(10),
-@Fecha NVARCHAR(10)
+@Hora time,
+@Fecha date
 AS
 INSERT INTO [dbo].[Tbl_RegistroAct]
            ([CodigoEmpleadosFK]
@@ -449,13 +461,15 @@ WHERE E.CodigoEmpleado = @CodigoEmpleadosFK  AND
       A.IDActividad = @IdActividadesFK  AND
 	  S.IDSucursal = @IdSucursalesFK  
 GO
-CREATE VIEW VW_Registros
+CREATE OR ALTER VIEW VWRegistros
 AS
-SELECT R.IdRegistro,
+SELECT  R.IdRegistro,
+	   R.Hora,
+	   R.Fecha,
+       A.IDActividad,
+	   A.DescripcionActividad,    
        E.CodigoEmpleado,
-	   E.Nombre,
-	   A.IDActividad,
-	   A.DescripcionActividad,
+	   E.Nombre,	  
 	   A.ValorActividad,
 	   S.IDSucursal,
 	   S.NombreSucursal,
@@ -470,7 +484,7 @@ SELECT R.IdRegistro,
   INNER JOIN [dbo].[Tbl_Marcas] AS M
   ON S.IdMarcas = M.IDMarca
 GO
-CREATE VIEW VW_AdmRegistros
+CREATE OR ALTER VIEW VWAdmRegistros
 AS
 SELECT *
   FROM  [dbo].[Tbl_RegistroAct] AS R 

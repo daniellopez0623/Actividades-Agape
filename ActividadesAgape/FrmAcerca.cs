@@ -16,5 +16,10 @@ namespace ActividadesAgape
         {
             InitializeComponent();
         }
+
+        private void FrmAcerca_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

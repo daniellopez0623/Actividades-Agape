@@ -24,6 +24,10 @@ namespace Negocios
         {
             return ObjU_D.BuscarAdmUsuarios_D();
         }
+        public DataTable MostrandoRoles_D()
+        {
+            return ObjU_D.MostrarRoles_D();
+        }
 
         public void GuardandoUsuarios_N()
         {

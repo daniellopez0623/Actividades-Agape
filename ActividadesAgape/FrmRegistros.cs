@@ -14,7 +14,7 @@ namespace ActividadesAgape
 {
     public partial class FrmRegistros : Form
     {
-        RegistroActividades_N objSclN = new RegistroActividades_N();
+        RegistroActividades_N objRgtN = new RegistroActividades_N();
 
         public FrmRegistros()
         {
@@ -38,25 +38,104 @@ namespace ActividadesAgape
         }
         private void DateLabels()
         {
-            labelHora.Text = DateTime.Now.ToShortTimeString();
-            labelFecha.Text = DateTime.Now.ToShortDateString();
+            labelHoraRgt.Text = DateTime.Now.ToLongTimeString();
+            labelFechaRgt.Text = DateTime.Now.ToShortDateString();
         }
         private void FrmRegistros_Load(object sender, EventArgs e)
         {
-            //dataGridViewActRgt.DataSource = objSclN.MostrandoRegistros_N();
+            dataGridViewRgt.DataSource = objRgtN.MostrandoRegistros_N();
             DateLabels();
             OcultarDataGrid();
-
-           
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            dataGridViewIDAct.Visible = false;
+            dataGridViewIDScl.Visible = false;
             Nuevo();
+            dataGridViewRgt.DataSource = objRgtN.MostrandoRegistros_N();
         }
 
         private void timerRegistrar_Tick(object sender, EventArgs e)
         {
 
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RegistroActividades_E.IdActividades1 = int.Parse(txtIDAct.Text);
+                RegistroActividades_E.IdSucursales1 = int.Parse(txtIDScl.Text);
+                RegistroActividades_E.CodeEmpleados1 = int.Parse( txtCodEmp.Text);
+                RegistroActividades_E.Hora1 = DateTime.Parse(labelHoraRgt.Text);
+                RegistroActividades_E.Fecha1 = DateTime.Parse(labelFechaRgt.Text);
+
+                objRgtN.GuardandoRegistros_N();
+
+                dataGridViewRgt.DataSource = objRgtN.MostrandoRegistros_N();
+
+                MessageBox.Show("Registro Guardado");
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"ERROR: {error.Message}");
+            }
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RegistroActividades_E.IdActividades1 = int.Parse(txtIDAct.Text);
+                RegistroActividades_E.IdSucursales1 = int.Parse(txtIDScl.Text);
+                RegistroActividades_E.CodeEmpleados1 = int.Parse(txtCodEmp.Text);
+
+                dataGridViewRgt.DataSource = objRgtN.BuscandoRegistros_N();
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"ERROR: {error.Message}");
+            }
+        }
+          
+        private void dataGridViewIDScl_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtIDScl.Text = dataGridViewIDScl.CurrentRow.Cells[0].Value.ToString();
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"ERROR: {error.Message}");
+            }
+        }  
+        private void dataGridViewIDAct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtIDAct.Text = dataGridViewIDAct.CurrentRow.Cells[0].Value.ToString();
+
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"ERROR: {error.Message}");
+            }
+        }
+
+        private void txtIDScl_Click(object sender, EventArgs e)
+        {
+            dataGridViewIDScl.DataSource = objRgtN.MostrandoRegistrosIDScl_N();
+            dataGridViewIDScl.Visible = true;
+            dataGridViewIDAct.Visible = false;
+        }
+
+        private void txtIDAct_Click(object sender, EventArgs e)
+        {
+            dataGridViewIDAct.DataSource = objRgtN.MostrandoRegistrosIDAct_N();
+            dataGridViewIDAct.Visible = true;
+            dataGridViewIDScl.Visible = false;
+        }
+
+      
     }
 }
